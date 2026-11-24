@@ -2,7 +2,6 @@
 
 Official distribution repository & documentation for **Timsco Connector** by **Timsco Partners LLC** ([timscoarchitects.kg](https://www.timscoarchitects.kg), Bishkek, Kyrgyzstan).
 
-- **Product Page & Documentation (RU / EN):** [https://sayedibraimov.github.io/timsco-connector/](https://sayedibraimov.github.io/timsco-connector/)
 - **Direct Windows Installer Download:** [TimscoConnectorSetup_v2.0.0.exe (2168 KB / 2219520 bytes)](https://github.com/sayedibraimov/timsco-connector/releases/download/v2.0.0/TimscoConnectorSetup_v2.0.0.exe)
 - **Installer SHA-256:** `f3d8d1420ec1c38f9c9e37593e134dd99ef167da5696a977e30e919f8fd48998`
 - **Latest Release:** [v2.0.0](https://github.com/sayedibraimov/timsco-connector/releases/tag/v2.0.0)
