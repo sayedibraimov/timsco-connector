@@ -1,26 +1,23 @@
 {
   "product": {
     "name": "Timsco Connector",
-    "version": "1.1.0",
-    "releaseDate": "2026-11-24",
-    "releaseDateDisplayRu": "24.11.2026",
-    "releaseDateDisplayEn": "Nov 24, 2026",
-    "revitVersion": "2026",
+    "version": "2.0.0",
+    "releaseDate": "2026-11-25",
+    "releaseDateDisplayRu": "25.11.2026",
+    "releaseDateDisplayEn": "Nov 25, 2026",
+    "revitVersion": "2022–2027",
     "os": "Windows 10 / 11 (64-bit)",
     "privilegesRu": "Права администратора не требуются (установка в профиль пользователя)",
     "privilegesEn": "No Admin / UAC required (per-user profile installation)",
     "installer": {
-      "fileName": "TimscoConnectorSetup_v1.1.0.exe",
-      "sizeBytes": 237568,
-      "sizeLabel": "232 KB",
-      "sha256": "d70f9807fe637634257f2bbf8975eb7dd990ee7ce119de64521397790be53a47",
-      "downloadUrl": "https://github.com/sayedibraimov/timsco-connector/releases/download/v1.1.0/TimscoConnectorSetup_v1.1.0.exe",
-      "defaultRelativeUrl": "https://github.com/sayedibraimov/timsco-connector/releases/download/v1.1.0/TimscoConnectorSetup_v1.1.0.exe",
-      "webflowHostingNoteRu": "Платформа Webflow Assets не принимает .exe файлы. Загрузите TimscoConnectorSetup_v1.1.0.exe в GitHub Releases, Cloudflare R2 или AWS S3 и укажите прямую ссылку в константе DOWNLOAD_URL (или через ?downloadUrl=...).",
-      "webflowHostingNoteEn": "Webflow Assets rejects .exe uploads. Host TimscoConnectorSetup_v1.1.0.exe on GitHub Releases, Cloudflare R2, or AWS S3 and set DOWNLOAD_URL (or ?downloadUrl=...) accordingly."
+      "fileName": "TimscoConnectorSetup_v2.0.0.exe",
+      "sizeBytes": 2219520,
+      "sizeLabel": "2168 KB",
+      "sha256": "f3d8d1420ec1c38f9c9e37593e134dd99ef167da5696a977e30e919f8fd48998",
+      "defaultRelativeUrl": "https://github.com/sayedibraimov/timsco-connector/releases/download/v2.0.0/TimscoConnectorSetup_v2.0.0.exe"
     },
-    "taglineRu": "ИИ-моделирование и 0-токеновая автоматизация Autodesk Revit 2026 для Google Antigravity",
-    "taglineEn": "AI-Driven Modeling & Zero-Token Automation for Autodesk Revit 2026 in Google Antigravity"
+    "taglineRu": "ИИ-моделирование и 0-токеновая автоматизация Autodesk Revit 2022–2027 для Google Antigravity",
+    "taglineEn": "AI-Driven Modeling & Zero-Token Automation for Autodesk Revit 2022–2027 in Google Antigravity"
   },
   "metrics": [
     {
@@ -31,28 +28,28 @@
       "captionEn": "Execute compiled DLLs via MCP App or direct invoke"
     },
     {
-      "value": "11",
-      "unitRu": "DLL-модулей",
-      "unitEn": "hot-load DLLs",
-      "captionRu": "Динамическая загрузка в память без перезапуска Revit",
-      "captionEn": "AssemblyLoadContext hot-load with zero Revit restarts"
+      "value": "2022–2027",
+      "unitRu": "6 версий Revit",
+      "unitEn": "6 Revit versions",
+      "captionRu": "Единый пакет: net48 (2022–2024), .NET 8 (2025–2026), .NET 10 (2027)",
+      "captionEn": "Unified bundle: net48 (2022–2024), .NET 8 (2025–2026), .NET 10 (2027)"
+    },
+    {
+      "value": "66",
+      "unitRu": "DLL (11 × 6)",
+      "unitEn": "compiled DLLs",
+      "captionRu": "11 модулей × 6 версий с автовыбором сборки сервером",
+      "captionEn": "11 modules × 6 Revit versions with auto-selected runtime"
     },
     {
       "value": "49",
       "unitRu": "BIM-действий",
       "unitEn": "BIM actions",
-      "captionRu": "Оси, стены, колонны, витражи, аудит, стыки, спецификации",
-      "captionEn": "Grids, walls, framing, louvers, audit, joins, schedules"
+      "captionRu": "Оси, стены, колонны, .rfa, аудит, стыки, фасады",
+      "captionEn": "Grids, walls, framing, .rfa, audit, joins, louvers"
     },
     {
-      "value": "3 237",
-      "unitRu": "семейств .rfa",
-      "unitEn": ".rfa families",
-      "captionRu": "Библиотеки English (3237) и Russian (29) без диалогов",
-      "captionEn": "English (3237) & Russian (29) libraries, silent load"
-    },
-    {
-      "value": "232 KB",
+      "value": "2168 KB",
       "unitRu": "100% локально",
       "unitEn": "100% local pipe",
       "captionRu": "Единый EXE-установщик и локальный Named Pipe",
@@ -62,12 +59,12 @@
   "features": [
     {
       "id": "zero-token-dlls",
-      "tagRu": "0 ТОКЕНОВ",
-      "tagEn": "0 TOKENS",
-      "titleRu": "Библиотека 11 DLL-модулей",
-      "titleEn": "11 Hot-Load Zero-Token DLLs",
-      "descRu": "49 готовых BIM-операций на строгом C# 5.0 для Revit 2026 API (`ElementId.Value`, миллиметры и градусы, единая транзакция Ctrl+Z). Загружаются в память через `AssemblyLoadContext` без перезапуска Revit.",
-      "descEn": "49 production C# 5.0 BIM actions for Revit 2026 API (`ElementId.Value`, mm & degrees, single Ctrl+Z transaction). Loaded dynamically via `AssemblyLoadContext` without restarting Revit."
+      "tagRu": "0 ТОКЕНОВ · 66 DLL",
+      "tagEn": "0 TOKENS · 66 DLLS",
+      "titleRu": "Мультиверсионная библиотека 11 модулей",
+      "titleEn": "66 Compiled Multi-Version DLLs",
+      "descRu": "11 модулей × 6 версий Autodesk Revit 2022–2027 (49 готовых операций на C# 5.0 через `RevitCompat`, миллиметры и градусы, единая транзакция Ctrl+Z). Сервер сам подбирает DLL под активный Revit.",
+      "descEn": "11 modules × 6 Autodesk Revit 2022–2027 targets (49 C# 5.0 BIM actions using `RevitCompat`, mm & degrees, single Ctrl+Z transaction). Server auto-selects the matching runtime DLL."
     },
     {
       "id": "cad-light-ui",
@@ -75,8 +72,8 @@
       "tagEn": "MCP APP UI",
       "titleRu": "Интерфейс Timsco CAD Light Studio",
       "titleEn": "Timsco CAD Light Studio UI",
-      "descRu": "Встраиваемая панель инспектора с секциями Total Numbers, Navigator & Parameters и Quick Scripts & Prompts: мгновенный фильтр элементов, просмотр параметров и запуск DLL в один клик.",
-      "descEn": "Embedded inspector panel featuring collapsible Total Numbers, Navigator & Parameters, and Quick Scripts & Prompts tabs for instant filtering, parameter review, and one-click DLL execution."
+      "descRu": "Встраиваемая панель инспектора с секциями Total Numbers, Navigator & Parameters и Quick Scripts & Prompts: автоопределение года Revit (2022–2027), фильтр элементов и запуск DLL в один клик.",
+      "descEn": "Embedded inspector panel featuring collapsible Total Numbers, Navigator & Parameters, and Quick Scripts & Prompts tabs with live Revit year badge (2022–2027) and one-click DLL execution."
     },
     {
       "id": "family-manager",
@@ -84,8 +81,8 @@
       "tagEn": ".RFA FAMILIES",
       "titleRu": "Менеджер библиотек семейств",
       "titleEn": ".rfa Family Browser & Placement",
-      "descRu": "Индексирование 3 237 англоязычных и 29 русскоязычных семейств Revit 2026, тихая загрузка через `IFamilyLoadOptions` и пакетная расстановка свободных и зависимых экземпляров.",
-      "descEn": "Indexes 3,237 English and 29 Russian Revit 2026 `.rfa` families, loads them silently via `IFamilyLoadOptions`, and batch-places hosted and unhosted instances."
+      "descRu": "Автоопределение каталога библиотек RVT <year>\\Libraries\\English|Russian (до 3 237 семейств), тихая загрузка через `IFamilyLoadOptions` и пакетная расстановка свободных и зависимых экземпляров.",
+      "descEn": "Auto-detects active RVT <year>\\Libraries\\English|Russian directories (up to 3,237 `.rfa` families), loads silently via `IFamilyLoadOptions`, and batch-places hosted and unhosted instances."
     },
     {
       "id": "visual-modeling",
@@ -109,10 +106,10 @@
       "id": "quota-portable",
       "tagRu": "ЭКОНОМИЯ КВОТ",
       "tagEn": "QUOTA ECONOMY",
-      "titleRu": "Оптимизация токенов и единый дистрибутив",
-      "titleEn": "Token Economy & Portable EXE Setup",
-      "descRu": "Выгрузки >50 элементов сохраняются в `%LOCALAPPDATA%\\TimscoConnector\\out\\` (а не в контекст LLM), экономя квоту Antigravity. Полный стек упакован в портативный EXE весом 232 KB.",
-      "descEn": "Exports exceeding 50 elements stream to `%LOCALAPPDATA%\\TimscoConnector\\out\\` instead of flooding LLM context. Entire stack ships as a self-contained 232 KB installer."
+      "titleRu": "Изолированный Named Pipe и единый EXE",
+      "titleEn": "Versioned Named Pipes & Single EXE",
+      "descRu": "Версионно-изолированные каналы `rvt-mcp-pipe-<year>` и выгрузка >50 элементов в `%LOCALAPPDATA%\\TimscoConnector\\out\\`. Весь стек для 6 версий Revit упакован в портативный EXE весом 2168 KB.",
+      "descEn": "Version-isolated `rvt-mcp-pipe-<year>` listeners and >50 item exports stream to `%LOCALAPPDATA%\\TimscoConnector\\out\\`. Full 6-version Revit suite bundled in a 2168 KB installer."
     }
   ],
   "requirements": [
@@ -125,8 +122,8 @@
     {
       "labelRu": "Целевая BIM-среда",
       "labelEn": "Target BIM Host",
-      "valueRu": "Autodesk Revit 2026 (.NET 8)",
-      "valueEn": "Autodesk Revit 2026 (.NET 8)"
+      "valueRu": "Autodesk Revit 2022–2027",
+      "valueEn": "Autodesk Revit 2022–2027"
     },
     {
       "labelRu": "ИИ-клиент",
@@ -146,52 +143,57 @@
       "num": "01",
       "titleRu": "Скачайте и проверьте дистрибутив",
       "titleEn": "Download & Verify the Installer",
-      "bodyRu": "Загрузите единый установщик TimscoConnectorSetup_v1.1.0.exe (232 KB) и при необходимости сверьте контрольную сумму SHA-256.",
-      "bodyEn": "Download the single-file TimscoConnectorSetup_v1.1.0.exe (232 KB) installer and verify its SHA-256 checksum.",
-      "noteRu": "Windows SmartScreen: поскольку сборка v1.1.0 распространяется для студий без коммерческого EV-сертификата, нажмите «Подробнее → Выполнить в любом случае».",
-      "noteEn": "Windows SmartScreen: because v1.1.0 is an internal studio binary without an EV code-signing certificate, click \"More info → Run anyway\"."
+      "bodyRu": "Загрузите единый установщик TimscoConnectorSetup_v2.0.0.exe (2168 KB) и при необходимости сверьте контрольную сумму SHA-256.",
+      "bodyEn": "Download the single-file TimscoConnectorSetup_v2.0.0.exe (2168 KB) installer and verify its SHA-256 checksum.",
+      "noteRu": "Windows SmartScreen: поскольку сборка v2.0.0 распространяется напрямую без коммерческого EV-сертификата, нажмите «Подробнее → Выполнить в любом случае».",
+      "noteEn": "Windows SmartScreen: because v2.0.0 ships directly without an EV code-signing certificate, click \"More info → Run anyway\"."
     },
     {
       "num": "02",
-      "titleRu": "Запустите установку без прав администратора",
-      "titleEn": "Run Per-User Installation",
-      "bodyRu": "Закройте активную сессию Revit 2026 (при запущенном Revit установщик переименует заблокированные файлы и предупредит о перезапуске) и нажмите «Install». Установка в профиль пользователя занимает меньше 3 секунд и автоматически переносит устаревший плагин revit-mcp.",
-      "bodyEn": "Close any active Revit 2026 session (if Revit is open, locked add-in files are safely staged and flagged for restart) and click \"Install\". Installs into your user profile in under 3 seconds and migrates legacy revit-mcp automatically.",
-      "noteRu": "Повторный запуск установщика поверх v1.0.0 безопасно обновляет плагин, DLL-библиотеки и манифест Revit.",
-      "noteEn": "Running over v1.0.0 cleanly updates the plugin, DLL suite, and Revit add-in manifest in place."
+      "titleRu": "Выберите версии Revit и установите (User Scope)",
+      "titleEn": "Select Revit Versions & Install (Per-User)",
+      "bodyRu": "Закройте активные сессии Revit (если Revit открыт, установщик переименует заблокированные файлы и предупредит о перезапуске), отметьте нужные версии (2022–2027 определяются автоматически) и нажмите «Install Timsco Connector».",
+      "bodyEn": "Close active Revit sessions (locked add-in files are safely staged if Revit is open), review auto-detected Revit versions (2022–2027), and click \"Install Timsco Connector\".",
+      "noteRu": "Повторный запуск установщика поверх v1.x автоматически очищает устаревшую плоскую RevitMcpAddin.dll и размещает сборку в TimscoConnector\\.",
+      "noteEn": "Upgrading over v1.x cleanly removes legacy root RevitMcpAddin.dll and stages isolated TimscoConnector\\ dependencies."
     },
     {
       "num": "03",
-      "titleRu": "Подтвердите надстройку в Autodesk Revit 2026",
-      "titleEn": "Trust the Add-In in Autodesk Revit 2026",
-      "bodyRu": "Откройте Autodesk Revit 2026. При первом запуске появится окно безопасности сторонних надстроек — выберите «Всегда загружать» (Always Load) для модуля Timsco Connector / RevitMcpAddin.",
-      "bodyEn": "Launch Autodesk Revit 2026. On first startup, click \"Always Load\" in Revit's external add-in security dialog for Timsco Connector / RevitMcpAddin.",
-      "noteRu": "После загрузки фоновый Named Pipe мост запускается автоматически вместе с Revit.",
-      "noteEn": "Once trusted, the local Named Pipe bridge starts automatically with every Revit 2026 session."
+      "titleRu": "Подтвердите надстройку в Autodesk Revit 2022–2027",
+      "titleEn": "Trust the Add-In in Autodesk Revit 2022–2027",
+      "bodyRu": "Откройте целевую версию Autodesk Revit (2022–2027). При первом запуске появится окно безопасности сторонних надстроек — выберите «Всегда загружать» (Always Load) для модуля Timsco Connector / RevitMcpAddin.",
+      "bodyEn": "Launch your target Autodesk Revit (2022–2027). On first startup, click \"Always Load\" in Revit's external add-in security dialog for Timsco Connector / RevitMcpAddin.",
+      "noteRu": "Канал `\\\\.\\pipe\\rvt-mcp-pipe-<year>` запускается автоматически и позволяет держать открытыми несколько версий Revit.",
+      "noteEn": "Once trusted, the `\\\\.\\pipe\\rvt-mcp-pipe-<year>` bridge starts automatically, supporting concurrent Revit versions."
     },
     {
       "num": "04",
       "titleRu": "Подключите и проверьте работу в Google Antigravity",
       "titleEn": "Launch & Verify in Google Antigravity",
-      "bodyRu": "Откройте или перезапустите Google Antigravity. MCP-сервер `revit` и правило `AGENTS.md` подключаются автоматически. Вызовите `open_revit_inspector` или выполните 0-токеновую проверку `CleanupTools.dll` (`model_health`).",
-      "bodyEn": "Open or reload Google Antigravity. The `revit` MCP server and `AGENTS.md` workspace rules register automatically. Open `open_revit_inspector` or test zero-token `CleanupTools.dll` (`model_health`).",
-      "noteRu": "Удаление выполняется штатно через «Параметры Windows → Приложения» или флагом `/uninstall /S`.",
-      "noteEn": "Clean removal is supported anytime via Windows Settings → Installed Apps or CLI flag `/uninstall /S`."
+      "bodyRu": "Откройте или перезапустите Google Antigravity. MCP-сервер `revit` и правило `AGENTS.md` автоматически определят запущенный Revit. Вызовите `open_revit_inspector` или выполните 0-токеновую проверку `CleanupTools.dll` (`model_health`).",
+      "bodyEn": "Open or reload Google Antigravity. The `revit` MCP server and `AGENTS.md` rules auto-detect the live Revit year. Open `open_revit_inspector` or test zero-token `CleanupTools.dll` (`model_health`).",
+      "noteRu": "Удаление всех версий выполняется через «Параметры Windows → Приложения» или флагом `/uninstall /S`.",
+      "noteEn": "Clean removal across all versions is supported anytime via Windows Settings → Installed Apps or CLI flag `/uninstall /S`."
     }
   ],
   "cliFlags": [
     {
-      "command": "TimscoConnectorSetup_v1.1.0.exe /S",
-      "descRu": "Тихая автоматическая установка без окон (также /silent, /quiet)",
-      "descEn": "Silent unattended installation without UI prompts (also /silent, /quiet)"
+      "command": "TimscoConnectorSetup_v2.0.0.exe /S",
+      "descRu": "Тихая автоматическая установка без окон для всех обнаруженных версий Revit 2022–2027",
+      "descEn": "Silent unattended installation for all auto-detected Revit 2022–2027 installations"
     },
     {
-      "command": "TimscoConnectorSetup_v1.1.0.exe /uninstall /S",
-      "descRu": "Тихое полное удаление плагина, надстройки Revit и записи реестра HKCU",
-      "descEn": "Silent full uninstall of plugin, Revit add-in, and HKCU registry entry"
+      "command": "TimscoConnectorSetup_v2.0.0.exe /S /versions 2024,2026",
+      "descRu": "Тихая установка строго для указанных версий Revit (поддерживается также /versions all)",
+      "descEn": "Silent install targeting explicit Revit versions (also supports /versions all)"
     },
     {
-      "command": "TimscoConnectorSetup_v1.1.0.exe /extract C:\\Temp\\TimscoPayload",
+      "command": "TimscoConnectorSetup_v2.0.0.exe /uninstall /S",
+      "descRu": "Тихое полное удаление плагина, надстроек 2022–2027 и записи реестра HKCU",
+      "descEn": "Silent full uninstall of plugin, all 2022–2027 add-ins, and HKCU registry entry"
+    },
+    {
+      "command": "TimscoConnectorSetup_v2.0.0.exe /extract C:\\Temp\\TimscoPayload",
       "descRu": "Распаковка содержимого без изменения профиля пользователя (для IT-аудита и GPO)",
       "descEn": "Extract embedded payload without modifying user profile (for IT audit / SCCM / GPO)"
     },
@@ -204,13 +206,13 @@
   "installPaths": [
     {
       "path": "%USERPROFILE%\\.gemini\\config\\plugins\\timsco-connector\\",
-      "contentsRu": "MCP-сервер (`bin\\RevitMcpServer.exe`), UI-приложение (`ui\\app.html`), 11 DLL (`scripts\\lib\\out\\*.dll`), `rules\\AGENTS.md`, `skills\\image-to-revit\\SKILL.md`, `assets\\`, `plugin.json`, `mcp_config.json`, `UninstallTimscoConnector.exe`",
-      "contentsEn": "MCP server (`bin\\RevitMcpServer.exe`), UI panel (`ui\\app.html`), 11 DLLs (`scripts\\lib\\out\\*.dll`), `rules\\AGENTS.md`, `skills\\image-to-revit\\SKILL.md`, `assets\\`, `plugin.json`, `mcp_config.json`, `UninstallTimscoConnector.exe`"
+      "contentsRu": "MCP-сервер (`bin\\RevitMcpServer.exe`), UI-приложение (`ui\\app.html`), 66 версионных DLL (`scripts\\lib\\out\\<year>\\*.dll`), `src\\RevitCompat.cs`, `rules\\AGENTS.md`, `skills\\image-to-revit\\SKILL.md`, `assets\\`, `UninstallTimscoConnector.exe`",
+      "contentsEn": "MCP server (`bin\\RevitMcpServer.exe`), UI panel (`ui\\app.html`), 66 per-year DLLs (`scripts\\lib\\out\\<year>\\*.dll`), `src\\RevitCompat.cs`, `rules\\AGENTS.md`, `skills\\image-to-revit\\SKILL.md`, `assets\\`, `UninstallTimscoConnector.exe`"
     },
     {
-      "path": "%APPDATA%\\Autodesk\\Revit\\Addins\\2026\\",
-      "contentsRu": "Манифест `RevitMcpAddin.addin` и сборка Revit 2026 API (.NET 8) `RevitMcpAddin.dll` для Named Pipe и `AssemblyLoadContext`",
-      "contentsEn": "Manifest `RevitMcpAddin.addin` and .NET 8 Revit 2026 bridge assembly `RevitMcpAddin.dll` handling Named Pipe and `AssemblyLoadContext`"
+      "path": "%APPDATA%\\Autodesk\\Revit\\Addins\\<year>\\",
+      "contentsRu": "Манифест `RevitMcpAddin.addin` и папка `TimscoConnector\\` с `RevitMcpAddin.dll` (2022–2027; для 2022–2024 с изолированными `net48`-зависимостями)",
+      "contentsEn": "Manifest `RevitMcpAddin.addin` and isolated `TimscoConnector\\` folder containing `RevitMcpAddin.dll` (2022–2027; plus isolated `net48` runtime deps for 2022–2024)"
     },
     {
       "path": "%LOCALAPPDATA%\\TimscoConnector\\out\\",
@@ -220,17 +222,46 @@
   ],
   "releases": [
     {
+      "slug": "v2-0-0",
+      "version": "2.0.0",
+      "releaseDate": "2026-11-25",
+      "dateDisplayRu": "25.11.2026",
+      "dateDisplayEn": "Nov 25, 2026",
+      "statusRu": "Текущий релиз",
+      "statusEn": "Current Release",
+      "isLatest": true,
+      "installerFile": "TimscoConnectorSetup_v2.0.0.exe",
+      "installerSize": "2168 KB",
+      "sha256": "f3d8d1420ec1c38f9c9e37593e134dd99ef167da5696a977e30e919f8fd48998",
+      "summaryRu": "Мультиверсионная архитектура Autodesk Revit 2022–2027 (net48, .NET 8, .NET 10), слой совместимости RevitCompat, 66 версионных DLL (11 × 6), изоляция Named Pipe каналов и умный установщик с автоопределением и флагом /versions.",
+      "summaryEn": "Unified multi-version architecture for Autodesk Revit 2022–2027 (net48, .NET 8, .NET 10), RevitCompat compatibility layer, 66 per-year DLLs (11 × 6), version-isolated Named Pipes, and smart setup with auto-detection and /versions CLI flag.",
+      "highlightsRu": [
+        "Добавлена полная поддержка 6 версий Autodesk Revit: 2022–2023 (net48 + REVIT_LEGACY_ID), 2024 (net48 + 64-bit ElementId), 2025–2026 (net8.0-windows) и 2027 (net10.0-windows + адаптация Curve.Intersect).",
+        "Внедрён единый слой src/RevitCompat.cs для совместимости ElementId между 32-битным IntegerValue и 64-битным Value; скомпилировано 66 модулей в scripts\\lib\\out\\<year>\\.",
+        "Реализованы версионные Named Pipe каналы \\\\.\\pipe\\rvt-mcp-pipe-<year> и изоляция net48-зависимостей (System.Text.Json) внутри Addins\\<year>\\TimscoConnector\\ без конфликтов с другими плагинами.",
+        "Обновлён установщик TimscoConnectorSetup_v2.0.0.exe (2168 KB): автообнаружение установленных Revit 2022–2027, выбор галочками в GUI, ключ /versions 2024,2026 (или all) и автоочистка старых сборок v1.x.",
+        "FamilyTools.dll (scan_rfa_files) автоматически определяет год запущенного Revit для поиска в C:\\ProgramData\\Autodesk\\RVT <year>\\Libraries\\."
+      ],
+      "highlightsEn": [
+        "Added full support across 6 Autodesk Revit releases: 2022–2023 (net48 + REVIT_LEGACY_ID), 2024 (net48 + 64-bit ElementId), 2025–2026 (net8.0-windows), and 2027 (net10.0-windows + CurveIntersectResultOption.Detailed).",
+        "Introduced src/RevitCompat.cs unifying 32-bit IntegerValue and 64-bit ElementId.Value across the entire codebase, shipping 66 compiled DLLs under scripts\\lib\\out\\<year>\\.",
+        "Added version-isolated Named Pipe endpoints (\\\\.\\pipe\\rvt-mcp-pipe-<year>) and isolated net48 runtime dependencies inside Addins\\<year>\\TimscoConnector\\ to prevent DLL conflicts.",
+        "Upgraded TimscoConnectorSetup_v2.0.0.exe (2168 KB) with auto-detection of Revit 2022–2027, GUI version checkboxes, /versions CLI flag, legacy v1.x root DLL cleanup, and full multi-version uninstall.",
+        "Updated FamilyTools.dll (scan_rfa_files) to dynamically resolve the active RVT <year>\\Libraries\\ folder."
+      ]
+    },
+    {
       "slug": "v1-1-0",
       "version": "1.1.0",
       "releaseDate": "2026-11-24",
       "dateDisplayRu": "24.11.2026",
       "dateDisplayEn": "Nov 24, 2026",
-      "statusRu": "Текущий релиз",
-      "statusEn": "Current Release",
-      "isLatest": true,
+      "statusRu": "Предыдущий релиз",
+      "statusEn": "Previous Release",
+      "isLatest": false,
       "installerFile": "TimscoConnectorSetup_v1.1.0.exe",
       "installerSize": "232 KB",
-      "sha256": "d70f9807fe637634257f2bbf8975eb7dd990ee7ce119de64521397790be53a47",
+      "sha256": "f3d8d1420ec1c38f9c9e37593e134dd99ef167da5696a977e30e919f8fd48998",
       "summaryRu": "Единый нативный EXE-установщик, фирменный айдентити Timsco Partners (3D-логотип T), полностью переработанный CAD Light Studio UI, 100% переносимость путей и полная библиотека 11 DLL-модулей (49 действий).",
       "summaryEn": "Single-file native Windows EXE installer, official Timsco Partners isometric 3D T branding, redesigned Timsco CAD Light Studio UI, 100% user-path portability, and complete 11-DLL suite (49 actions).",
       "highlightsRu": [
@@ -557,14 +588,14 @@
     {
       "qRu": "Почему Windows SmartScreen показывает предупреждение при запуске .exe?",
       "qEn": "Why does Windows SmartScreen show a warning on the .exe installer?",
-      "aRu": "Сборка v1.1.0 распространяется напрямую от Timsco Partners LLC без платной коммерческой подписи EV Code Signing. Вы всегда можете сверить SHA-256 файла на этой странице (d70f9807...0be53a47) или распаковать содержимое без запуска установщика командой `/extract C:\\Temp\\TimscoPayload` для проверки.",
-      "aEn": "The v1.1.0 binary is distributed directly without a paid EV Code Signing certificate. Verify the file SHA-256 on this page (d70f9807...0be53a47) or inspect all contents safely prior to running via `/extract C:\\Temp\\TimscoPayload`."
+      "aRu": "Сборка v2.0.0 распространяется напрямую от Timsco Partners LLC без платной коммерческой подписи EV Code Signing. Вы всегда можете сверить SHA-256 файла на этой странице (f3d8d142...8fd48998) или распаковать содержимое без запуска установщика командой `/extract C:\\Temp\\TimscoPayload` для проверки.",
+      "aEn": "The v2.0.0 binary is distributed directly without a paid EV Code Signing certificate. Verify the file SHA-256 on this page (f3d8d142...8fd48998) or inspect all contents safely prior to running via `/extract C:\\Temp\\TimscoPayload`."
     },
     {
-      "qRu": "Нужно ли перезапускать Revit 2026 после обновления C#-скриптов или вызова DLL?",
-      "qEn": "Do I need to restart Revit 2026 when running or updating C# DLL scripts?",
-      "aRu": "Нет. Надстройка RevitMcpAddin загружает скомпилированные DLL через выгружаемый `AssemblyLoadContext` на лету. Перезапуск Revit требуется только один раз после первичной установки или обновления самой надстройки через EXE.",
-      "aEn": "No. RevitMcpAddin loads compiled C# DLLs into memory via a collectible `AssemblyLoadContext`. Restarting Revit 2026 is only required once after installing or updating the add-in itself."
+      "qRu": "Нужно ли перезапускать Revit после обновления C#-скриптов или вызова DLL?",
+      "qEn": "Do I need to restart Revit when running or updating C# DLL scripts?",
+      "aRu": "Нет. Надстройка RevitMcpAddin динамически загружает скомпилированные DLL (`AssemblyLoadContext` в Revit 2025–2027, изолированная загрузка в 2022–2024). Перезапуск Revit требуется только один раз после первичной установки или обновления самой надстройки через EXE.",
+      "aEn": "No. RevitMcpAddin loads compiled C# DLLs dynamically (`AssemblyLoadContext` on Revit 2025–2027, isolated loader on 2022–2024). Restarting Revit is only required once after installing or updating the add-in itself."
     },
     {
       "qRu": "Почему запуск скриптов из библиотеки DLL называется 0-токеновым?",
@@ -581,8 +612,8 @@
     {
       "qRu": "Работает ли интеграция с русскоязычной и англоязычной библиотеками семейств .rfa?",
       "qEn": "Does FamilyTools work with both Russian and English Revit .rfa libraries?",
-      "aRu": "Да. По умолчанию `scan_rfa_files` ищет в `C:\\ProgramData\\Autodesk\\RVT 2026\\Libraries\\Russian` (29 семейств), а полная библиотека из 3 237 семейств доступна передачей параметра `folder` на `Libraries\\English`. Загрузка происходит тихо через `IFamilyLoadOptions`.",
-      "aEn": "Yes. By default `scan_rfa_files` scans `Libraries\\Russian` (29 families), while the complete 3,237-family library is queried by setting `folder` to `C:\\ProgramData\\Autodesk\\RVT 2026\\Libraries\\English`. Loading suppresses modal prompts via `IFamilyLoadOptions`."
+      "aRu": "Да. `FamilyTools.dll` автоматически определяет год активного Revit (2022–2027) и сканирует `C:\\ProgramData\\Autodesk\\RVT <year>\\Libraries\\Russian` (по умолчанию) или `Libraries\\English` при передаче параметра `folder`. Загрузка происходит тихо через `IFamilyLoadOptions`.",
+      "aEn": "Yes. `FamilyTools.dll` automatically detects the running Revit year (2022–2027) and scans `C:\\ProgramData\\Autodesk\\RVT <year>\\Libraries\\Russian` (default) or `Libraries\\English` via the `folder` argument. Loading suppresses modal prompts via `IFamilyLoadOptions`."
     },
     {
       "qRu": "Отправляет ли Timsco Connector BIM-модель или геометрию во внешнее облако?",

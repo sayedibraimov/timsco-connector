@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Timsco Connector v1.1.0 — AI &amp; Zero-Token BIM Automation for Autodesk Revit 2026 | Timsco Partners LLC</title>
-  <meta name="description" content="Timsco Connector v1.1.0 — локальный MCP-мост, 11 0-токеновых DLL-модулей (49 BIM-действий) и CAD Light интерфейс для Autodesk Revit 2026 и Google Antigravity от Timsco Partners LLC (Бишкек)." />
+  <title>Timsco Connector v2.0.0 — AI &amp; Zero-Token BIM Automation for Autodesk Revit 2022–2027 | Timsco Partners LLC</title>
+  <meta name="description" content="Timsco Connector v2.0.0 — локальный MCP-мост, 66 0-токеновых DLL-сборок (11 модулей × 6 версий Revit 2022–2027, 49 BIM-действий) и CAD Light интерфейс для Google Antigravity от Timsco Partners LLC (Бишкек)." />
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='0' y='0' width='32' height='32' rx='5.5' fill='%23004EE0'/%3E%3Cpolygon points='15.1,17.4 18.7,19.45 21.1,18.07 21.1,22.35 15.1,25.8' fill='%23004EE0' stroke='%23FFFFFF' stroke-width='0.95' stroke-linejoin='round'/%3E%3Cpolygon points='13.5,5.8 24.7,12.2 18.7,15.65 7.5,9.25' fill='%23669CFF' stroke='%23FFFFFF' stroke-width='0.95' stroke-linejoin='round'/%3E%3Cpolygon points='18.7,15.65 24.7,12.2 24.7,16.0 18.7,19.45' fill='%23004EE0' stroke='%23FFFFFF' stroke-width='0.95' stroke-linejoin='round'/%3E%3Cpolygon points='7.5,9.25 18.7,15.65 18.7,19.45 15.1,17.4 15.1,25.8 11.1,23.5 11.1,15.1 7.5,13.05' fill='%23FFFFFF' stroke='%23FFFFFF' stroke-width='0.6' stroke-linejoin='round'/%3E%3C/svg%3E" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -106,24 +106,6 @@
     .rail-band--dark .rail-inner {
       border-left-color: var(--border-hero);
       border-right-color: var(--border-hero);
-    }
-
-    body.embed-mode {
-      --rail-pad: 0px;
-    }
-
-    body.embed-mode .site-header,
-    body.embed-mode .pre-footer-band,
-    body.embed-mode .site-footer {
-      display: none !important;
-    }
-
-    body.embed-mode .embed-bar {
-      display: flex !important;
-    }
-
-    body.embed-mode .rail-inner {
-      max-width: none;
     }
 
     /* Header */
@@ -271,54 +253,6 @@
       flex-direction: column;
       gap: 10px;
       margin-bottom: 16px;
-    }
-
-    /* Compact Embed Bar for Webflow iframe (?embed=1) */
-    .embed-bar {
-      display: none;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 12px;
-      padding: 12px 24px;
-      background: #FFFFFF;
-      border-bottom: 1px solid var(--border);
-      border-left: 1px solid var(--border);
-      border-right: 1px solid var(--border);
-    }
-
-    .embed-bar-left {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      flex-wrap: wrap;
-    }
-
-    .embed-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      font-family: var(--font-mono);
-      font-size: 12px;
-      font-weight: 600;
-      letter-spacing: 0.07em;
-      text-transform: uppercase;
-      color: var(--ink-primary);
-    }
-
-    .embed-nav {
-      display: flex;
-      align-items: center;
-      gap: 16px;
-      flex-wrap: wrap;
-      padding-left: 14px;
-      border-left: 1px solid var(--border);
-    }
-
-    .embed-bar-right {
-      display: flex;
-      align-items: center;
-      gap: 10px;
     }
 
     /* Buttons (Sharp 0px corners per timscoarchitects.kg) */
@@ -1632,9 +1566,6 @@
       .header-actions .btn {
         display: none;
       }
-      .embed-nav {
-        display: none;
-      }
       .spec-meta-table {
         grid-template-columns: 1fr;
       }
@@ -1649,7 +1580,7 @@
 </head>
 <body>
   <div id="page-root">
-    <!-- STANDALONE SITE HEADER (hidden in ?embed=1) -->
+    <!-- SITE HEADER -->
     <header class="site-header" id="site-header">
       <div class="header-inner">
         <a href="#overview" class="brand-block">
@@ -1679,7 +1610,7 @@
             <button type="button" class="lang-btn" data-set-lang="ru">RU</button>
             <button type="button" class="lang-btn" data-set-lang="en">EN</button>
           </div>
-          <a href="#" class="btn btn--primary" data-download-link data-i18n="navDownload">Скачать v1.1.0 ↗</a>
+          <a href="#" class="btn btn--primary" data-download-link data-i18n="navDownload">Скачать v2.0.0 ↗</a>
           <button type="button" class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle Menu" aria-expanded="false">
             <svg width="20" height="14" viewBox="0 0 20 14" fill="none" stroke="currentColor" stroke-width="1.6">
               <line x1="0" y1="1" x2="20" y2="1"/>
@@ -1702,45 +1633,15 @@
       </div>
     </header>
 
-    <!-- COMPACT EMBED BAR (visible only in ?embed=1 mode) -->
-    <div class="embed-bar" id="embed-bar">
-      <div class="embed-bar-left">
-        <span class="embed-badge">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="22" height="22" aria-hidden="true">
-            <rect x="0" y="0" width="32" height="32" rx="5.5" fill="#004EE0"/>
-            <polygon points="15.1,17.4 18.7,19.45 21.1,18.07 21.1,22.35 15.1,25.8" fill="#004EE0" stroke="#FFFFFF" stroke-width="0.95" stroke-linejoin="round"/>
-            <polygon points="13.5,5.8 24.7,12.2 18.7,15.65 7.5,9.25" fill="#669CFF" stroke="#FFFFFF" stroke-width="0.95" stroke-linejoin="round"/>
-            <polygon points="18.7,15.65 24.7,12.2 24.7,16.0 18.7,19.45" fill="#004EE0" stroke="#FFFFFF" stroke-width="0.95" stroke-linejoin="round"/>
-            <polygon points="7.5,9.25 18.7,15.65 18.7,19.45 15.1,17.4 15.1,25.8 11.1,23.5 11.1,15.1 7.5,13.05" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="0.6" stroke-linejoin="round"/>
-          </svg>
-          <span>TIMSCO CONNECTOR · v1.1.0</span>
-        </span>
-        <nav class="embed-nav" aria-label="Embed Anchors">
-          <a href="#architecture" class="nav-link" data-i18n="navOverview">Обзор</a>
-          <a href="#features" class="nav-link" data-i18n="navFeatures">Возможности</a>
-          <a href="#install" class="nav-link" data-i18n="navInstall">Установка</a>
-          <a href="#releases" class="nav-link" data-i18n="navReleases">Релизы</a>
-          <a href="#docs" class="nav-link" data-i18n="navDocs">Документация</a>
-        </nav>
-      </div>
-      <div class="embed-bar-right">
-        <div class="lang-switch" role="group" aria-label="Language Switcher">
-          <button type="button" class="lang-btn" data-set-lang="ru">RU</button>
-          <button type="button" class="lang-btn" data-set-lang="en">EN</button>
-        </div>
-        <a href="#" class="btn btn--primary btn--sm" data-download-link data-i18n="navDownload">Скачать v1.1.0 ↗</a>
-      </div>
-    </div>
-
     <!-- HERO BAND -->
     <section class="rail-band rail-band--dark" id="overview">
       <div class="rail-inner">
         <div class="hero-grid">
           <div class="hero-left">
-            <span class="eyebrow eyebrow--dark" data-i18n="heroEyebrow">AUTODESK REVIT 2026 · MCP APP · v1.1.0</span>
+            <span class="eyebrow eyebrow--dark" data-i18n="heroEyebrow">AUTODESK REVIT 2022–2027 · MCP APP · v2.0.0</span>
             <h1 class="h1-hero">Timsco Connector</h1>
             <p class="lead-copy" data-i18n="heroLead">
-              ИИ-моделирование и 0-токеновая автоматизация Autodesk Revit 2026 в Google Antigravity. Локальный мост без перезапуска Revit, единая транзакция Ctrl+Z и библиотека из 11 горяче-загружаемых DLL-модулей.
+              ИИ-моделирование и 0-токеновая автоматизация Autodesk Revit 2022–2027 в Google Antigravity. Локальный мост без перезапуска Revit, единая транзакция Ctrl+Z и 66 предкомпилированных DLL-сборок (11 модулей × 6 версий).
             </p>
             <div class="hero-cta-row">
               <a href="#" class="btn btn--primary" data-download-link data-i18n="heroCtaDownload">Скачать установщик (.EXE) ↗</a>
@@ -1750,7 +1651,7 @@
             <div class="hero-micro-note">
               <span data-i18n="heroNote1">✓ Без прав администратора (User Scope)</span>
               <span data-i18n="heroNote2">✓ 100% локальный Windows Named Pipe</span>
-              <span data-i18n="heroNote3">✓ Revit 2026 (.NET 8)</span>
+              <span data-i18n="heroNote3">✓ Revit 2022–2027 (net48 / .NET 8 / .NET 10)</span>
             </div>
           </div>
 
@@ -1758,11 +1659,11 @@
             <div class="spec-card">
               <div class="spec-card-head">
                 <span data-i18n="specHeader">RELEASE BUILD SPECIFICATION</span>
-                <span class="status-dot" data-i18n="specReady">READY FOR REVIT 2026</span>
+                <span class="status-dot" data-i18n="specReady">READY FOR REVIT 2022–2027</span>
               </div>
               <div class="spec-file-row">
-                <span class="spec-file-name">TimscoConnectorSetup_v1.1.0.exe</span>
-                <span class="spec-file-size">232 KB</span>
+                <span class="spec-file-name">TimscoConnectorSetup_v2.0.0.exe</span>
+                <span class="spec-file-size">2168 KB</span>
               </div>
               <div class="spec-meta-table">
                 <div class="spec-meta-cell">
@@ -1771,7 +1672,7 @@
                 </div>
                 <div class="spec-meta-cell">
                   <div class="spec-meta-k" data-i18n="specRevitK">Среда BIM</div>
-                  <div class="spec-meta-v">Autodesk Revit 2026 (.NET 8)</div>
+                  <div class="spec-meta-v">Autodesk Revit 2022–2027</div>
                 </div>
                 <div class="spec-meta-cell">
                   <div class="spec-meta-k" data-i18n="specPrivK">Привилегии</div>
@@ -1779,15 +1680,15 @@
                 </div>
                 <div class="spec-meta-cell">
                   <div class="spec-meta-k" data-i18n="specDateK">Дата сборки</div>
-                  <div class="spec-meta-v" data-i18n="specDateV">24.11.2026</div>
+                  <div class="spec-meta-v" data-i18n="specDateV">25.11.2026</div>
                 </div>
               </div>
               <div class="sha-box">
                 <div class="sha-head">
                   <span class="sha-label">SHA-256 CHECKSUM (VERIFIED)</span>
-                  <button type="button" class="copy-mini-btn" data-copy-text="d70f9807fe637634257f2bbf8975eb7dd990ee7ce119de64521397790be53a47" data-i18n="copyBtn">Копировать</button>
+                  <button type="button" class="copy-mini-btn" data-copy-text="f3d8d1420ec1c38f9c9e37593e134dd99ef167da5696a977e30e919f8fd48998" data-i18n="copyBtn">Копировать</button>
                 </div>
-                <div class="sha-value">d70f9807fe637634257f2bbf8975eb7dd990ee7ce119de64521397790be53a47</div>
+                <div class="sha-value">f3d8d1420ec1c38f9c9e37593e134dd99ef167da5696a977e30e919f8fd48998</div>
               </div>
             </div>
           </div>
@@ -1802,9 +1703,9 @@
       <div class="rail-inner">
         <div class="section-head">
           <span class="eyebrow" data-i18n="sec1Eyebrow">01 / АРХИТЕКТУРА ПРОДУКТА</span>
-          <h2 class="h2-section" data-i18n="sec1Title">Прямой локальный канал между ИИ и Revit 2026 API</h2>
+          <h2 class="h2-section" data-i18n="sec1Title">Прямой локальный канал между ИИ и Revit 2022–2027 API</h2>
           <p class="section-copy" data-i18n="sec1Copy">
-            Timsco Connector связывает Google Antigravity и открытую сессию Autodesk Revit 2026 через локальный сервер MCP и Windows Named Pipe. Вычисления выполняются внутри потокобезопасного ExternalEvent, а готовые C#-сценарии подгружаются в память без перезапуска программы.
+            Timsco Connector связывает Google Antigravity и открытую сессию Autodesk Revit 2022–2027 через локальный сервер MCP и версионный Windows Named Pipe. Вычисления выполняются внутри потокобезопасного ExternalEvent, а готовые C#-сценарии подгружаются в память без перезапуска программы.
           </p>
         </div>
 
@@ -1821,7 +1722,7 @@
           <span class="eyebrow" data-i18n="sec2Eyebrow">02 / ВОЗМОЖНОСТИ ПРОДУКТА</span>
           <h2 class="h2-section" data-i18n="sec2Title">Инженерная автоматизация, UI-инспектор и экономия квот</h2>
           <p class="section-copy" data-i18n="sec2Copy">
-            Шесть ключевых подсистем в едином пакете: от пакетного построения конструкций и фасадных ламелей до аудита предупреждений и встраиваемой панели управления моделью.
+            Шесть ключевых подсистем в едином пакете для Revit 2022–2027: от пакетного построения конструкций и фасадных ламелей до аудита предупреждений и встраиваемой панели управления моделью.
           </p>
         </div>
 
@@ -1836,7 +1737,7 @@
           <span class="eyebrow" data-i18n="sec3Eyebrow">03 / РУКОВОДСТВО УСТАНОВКИ И РАЗВЁРТЫВАНИЯ</span>
           <h2 class="h2-section" data-i18n="sec3Title">Установка за 4 шага без прав администратора</h2>
           <p class="section-copy" data-i18n="sec3Copy">
-            Все компоненты продукта (MCP-сервер, CAD Light UI, 11 DLL-библиотек, надстройка Revit 2026 и деинсталлятор) упакованы в единый нативный файл TimscoConnectorSetup_v1.1.0.exe.
+            Все компоненты продукта (MCP-сервер, CAD Light UI, 66 сборок DLL для Revit 2022–2027, 6 надстроек Revit и деинсталлятор) упакованы в единый нативный файл TimscoConnectorSetup_v2.0.0.exe.
           </p>
         </div>
 
@@ -1847,7 +1748,7 @@
         <div class="cli-panel">
           <div class="cli-header">
             <span class="cli-title" data-i18n="cliTitle">IT &amp; ENTERPRISE CLI FLAGS / ТИХОЕ РАЗВЁРТЫВАНИЕ</span>
-            <span class="eyebrow eyebrow--dark" data-i18n="cliSub">Поддерживается удаление через «Приложения Windows» или /uninstall /S</span>
+            <span class="eyebrow eyebrow--dark" data-i18n="cliSub">Удаление: Параметры Windows → Приложения или /uninstall /S</span>
           </div>
           <div class="cli-list" id="cli-list"></div>
         </div>
@@ -1861,7 +1762,7 @@
           <span class="eyebrow" data-i18n="sec4Eyebrow">04 / РЕЛИЗЫ И ЖУРНАЛ ИЗМЕНЕНИЙ</span>
           <h2 class="h2-section" data-i18n="sec4Title">История сборок и обновления дистрибутива</h2>
           <p class="section-copy" data-i18n="sec4Copy">
-            Актуальная сборка v1.1.0 готова к установке в архитектурно-инженерных студиях с полной переносимостью путей между рабочими станциями Windows.
+            Актуальная сборка v2.0.0 поддерживает Autodesk Revit 2022–2027 и готова к тиражированию на рабочих станциях Windows без прав администратора.
           </p>
         </div>
 
@@ -1874,7 +1775,7 @@
       <div class="rail-inner">
         <div class="section-head">
           <span class="eyebrow" data-i18n="sec5Eyebrow">05 / КРАТКАЯ ДОКУМЕНТАЦИЯ</span>
-          <h2 class="h2-section" data-i18n="sec5Title">Каталог 11 DLL (49 действий), 8 MCP-инструментов и FAQ</h2>
+          <h2 class="h2-section" data-i18n="sec5Title">Каталог 11 модулей (66 сборок DLL · 49 действий), 8 MCP-инструментов и FAQ</h2>
           <p class="section-copy" data-i18n="sec5Copy">
             Все координаты, размеры и отметки передаются в миллиметрах (мм), углы поворота — в градусах. Вызывайте библиотеки по короткому имени (например, DatumTools.dll).
           </p>
@@ -1928,7 +1829,7 @@
       </div>
     </section>
 
-    <!-- PRE-FOOTER CONTACT GRID (hidden in ?embed=1) -->
+    <!-- PRE-FOOTER CONTACT GRID -->
     <section class="rail-band pre-footer-band">
       <div class="rail-inner">
         <div class="prefooter-grid">
@@ -1963,7 +1864,7 @@
               <span class="eyebrow eyebrow--cobalt">TIMSCO PARTNERS LLC</span>
               <h3 class="h3-card" data-i18n="asideTitle">Проектная студия и BIM-разработка в Бишкеке</h3>
               <p class="section-copy" style="font-size:14px;" data-i18n="asideText">
-                Мы создаём прикладные инструменты автоматизации для Autodesk Revit 2026 на основе реальной архитектурной и инженерной практики.
+                Мы создаём прикладные инструменты автоматизации для Autodesk Revit 2022–2027 на основе реальной архитектурной и инженерной практики.
               </p>
             </div>
             <div style="display:flex;gap:10px;flex-wrap:wrap;">
@@ -1975,7 +1876,7 @@
       </div>
     </section>
 
-    <!-- CORPORATE FOOTER (hidden in ?embed=1) -->
+    <!-- CORPORATE FOOTER -->
     <footer class="rail-band site-footer" style="border-bottom:0;">
       <div class="rail-inner">
         <div class="footer-top">
@@ -2002,7 +1903,7 @@
         </div>
         <div class="footer-bottom">
           <span data-i18n="copyright">Проектная студия Timsco Architects · © 2026 ОсОО «Тимско Партнерс» · г. Бишкек, ул. Шопокова, 121/1, офис 511 · Все права защищены.</span>
-          <span class="mono">Timsco Connector v1.1.0</span>
+          <span class="mono">Timsco Connector v2.0.0</span>
         </div>
       </div>
     </footer>
@@ -2011,58 +1912,52 @@
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
   <script>
-    // =========================================================================
-    // SINGLE CONFIGURATION POINT FOR INSTALLER HOSTING
-    // Webflow Assets blocks .exe uploads. Upload dist/TimscoConnectorSetup_v1.1.0.exe
-    // to GitHub Releases, Cloudflare R2, or AWS S3 and update DOWNLOAD_URL below,
-    // or pass ?downloadUrl=https://... in the Webflow iframe src.
-    // =========================================================================
-    const DOWNLOAD_URL = "https://github.com/sayedibraimov/timsco-connector/releases/download/v1.1.0/TimscoConnectorSetup_v1.1.0.exe";
+    const DOWNLOAD_URL = "https://github.com/sayedibraimov/timsco-connector/releases/download/v2.0.0/TimscoConnectorSetup_v2.0.0.exe";
 
     const I18N = {
       ru: {
-        docTitle: "Timsco Connector v1.1.0 — Автоматизация Autodesk Revit 2026 для Google Antigravity",
+        docTitle: "Timsco Connector v2.0.0 — Автоматизация Autodesk Revit 2022–2027 для Google Antigravity",
         brandSub: "TIMSCO PARTNERS LLC",
         navOverview: "Обзор",
         navFeatures: "Возможности",
         navInstall: "Установка",
         navReleases: "Релизы",
         navDocs: "Документация",
-        navDownload: "Скачать v1.1.0 ↗",
-        heroEyebrow: "AUTODESK REVIT 2026 · MCP APP · v1.1.0",
-        heroLead: "ИИ-моделирование и 0-токеновая автоматизация Autodesk Revit 2026 в Google Antigravity. Локальный мост без перезапуска Revit, единая транзакция Ctrl+Z и библиотека из 11 горяче-загружаемых DLL-модулей.",
+        navDownload: "Скачать v2.0.0 ↗",
+        heroEyebrow: "AUTODESK REVIT 2022–2027 · MCP APP · v2.0.0",
+        heroLead: "ИИ-моделирование и 0-токеновая автоматизация Autodesk Revit 2022–2027 в Google Antigravity. Локальный мост без перезапуска Revit, единая транзакция Ctrl+Z и 66 предкомпилированных DLL-сборок (11 модулей × 6 версий).",
         heroCtaDownload: "Скачать (.EXE) ↗",
         heroCtaInstall: "Установка ↓",
         heroCtaDocs: "Документация 11 DLL",
         heroNote1: "✓ Без прав администратора (User Scope)",
         heroNote2: "✓ 100% локальный Windows Named Pipe",
-        heroNote3: "✓ Revit 2026 (.NET 8)",
+        heroNote3: "✓ Revit 2022–2027 (net48 / .NET 8 / .NET 10)",
         specHeader: "СПЕЦИФИКАЦИЯ СБОРКИ",
-        specReady: "ГОТОВО ДЛЯ REVIT 2026",
+        specReady: "ГОТОВО ДЛЯ REVIT 2022–2027",
         specOsK: "Платформа",
         specRevitK: "Среда BIM",
         specPrivK: "Привилегии",
         specPrivV: "Без UAC / Admin",
         specDateK: "Дата сборки",
-        specDateV: "24.11.2026",
+        specDateV: "25.11.2026",
         copyBtn: "Копировать",
         copiedToast: "Скопировано в буфер обмена",
         sec1Eyebrow: "01 / АРХИТЕКТУРА ПРОДУКТА",
-        sec1Title: "Прямой локальный канал между ИИ и Revit 2026 API",
-        sec1Copy: "Timsco Connector связывает Google Antigravity и открытую сессию Autodesk Revit 2026 через локальный MCP-сервер и Windows Named Pipe. Все операции выполняются внутри потокобезопасного ExternalEvent, а скомпилированные C#-сценарии загружаются в память без перезапуска программы.",
+        sec1Title: "Прямой локальный канал между ИИ и Revit 2022–2027 API",
+        sec1Copy: "Timsco Connector связывает Google Antigravity и открытую сессию Autodesk Revit 2022–2027 через локальный MCP-сервер и версионный Windows Named Pipe. Все операции выполняются внутри потокобезопасного ExternalEvent, а скомпилированные C#-сценарии загружаются в память без перезапуска программы.",
         sec2Eyebrow: "02 / ВОЗМОЖНОСТИ ПРОДУКТА",
         sec2Title: "Инженерная автоматизация, UI-инспектор и экономия квот",
-        sec2Copy: "Шесть ключевых подсистем в едином дистрибутиве: от пакетного моделирования конструктива и фасадных ламелей до аудита предупреждений и встраиваемого CAD Light интерфейса.",
+        sec2Copy: "Шесть ключевых подсистем в едином дистрибутиве для Revit 2022–2027: от пакетного моделирования конструктива и фасадных ламелей до аудита предупреждений и встраиваемого CAD Light интерфейса.",
         sec3Eyebrow: "03 / РУКОВОДСТВО УСТАНОВКИ И РАЗВЁРТЫВАНИЯ",
         sec3Title: "Установка за 4 шага без прав администратора",
-        sec3Copy: "Все компоненты продукта (MCP-сервер, CAD Light UI, 11 DLL-библиотек, надстройка Revit 2026 и деинсталлятор) упакованы в единый нативный файл TimscoConnectorSetup_v1.1.0.exe.",
+        sec3Copy: "Все компоненты продукта (MCP-сервер, CAD Light UI, 66 DLL-сборок, 6 надстроек Revit 2022–2027 и деинсталлятор) упакованы в единый нативный файл TimscoConnectorSetup_v2.0.0.exe.",
         cliTitle: "IT & ENTERPRISE CLI FLAGS / ТИХОЕ РАЗВЁРТЫВАНИЕ",
         cliSub: "Удаление: Параметры Windows → Приложения или /uninstall /S",
         sec4Eyebrow: "04 / РЕЛИЗЫ И ЖУРНАЛ ИЗМЕНЕНИЙ",
         sec4Title: "История сборок и обновления дистрибутива",
-        sec4Copy: "Актуальная сборка v1.1.0 готова к тиражированию на рабочих станциях Windows с полной переносимостью путей и сохранением отчётов в %LOCALAPPDATA%\\TimscoConnector\\out\\.",
+        sec4Copy: "Актуальная сборка v2.0.0 поддерживает Autodesk Revit 2022–2027 и готова к тиражированию на рабочих станциях Windows с автоопределением версий Revit.",
         sec5Eyebrow: "05 / КРАТКАЯ ДОКУМЕНТАЦИЯ",
-        sec5Title: "Каталог 11 DLL (49 действий), 8 MCP-инструментов и FAQ",
+        sec5Title: "Каталог 11 модулей (66 DLL · 49 действий), 8 MCP-инструментов и FAQ",
         sec5Copy: "Все координаты, размеры и отметки передаются в миллиметрах (мм), углы поворота — в градусах. Вызывайте библиотеки через revit_run_script по короткому имени (например, DatumTools.dll).",
         searchPlaceholder: "Поиск DLL, действия или описания...",
         actionsWord: "действ.",
@@ -2084,7 +1979,7 @@
         waSub: "Получите консультацию по внедрению Timsco Connector и BIM-автоматизации в вашей студии.",
         waBtn: "Консультация",
         asideTitle: "Проектная студия и BIM-разработка в Бишкеке",
-        asideText: "Мы создаём прикладные инструменты автоматизации для Autodesk Revit 2026 на основе реальной архитектурной и инженерной практики.",
+        asideText: "Мы создаём прикладные инструменты автоматизации для Autodesk Revit 2022–2027 на основе реальной архитектурной и инженерной практики.",
         mapBtn: "Офис в 2GIS ↗",
         footAbout: "О нас",
         footProjects: "Проекты",
@@ -2093,48 +1988,48 @@
         copyright: "Проектная студия Timsco Architects · © 2026 ОсОО «Тимско Партнерс» · г. Бишкек, ул. Шопокова, 121/1, офис 511 · Все права защищены."
       },
       en: {
-        docTitle: "Timsco Connector v1.1.0 — AI & Zero-Token BIM Automation for Autodesk Revit 2026",
+        docTitle: "Timsco Connector v2.0.0 — AI & Zero-Token BIM Automation for Autodesk Revit 2022–2027",
         brandSub: "TIMSCO PARTNERS LLC",
         navOverview: "Overview",
         navFeatures: "Features",
         navInstall: "Install",
         navReleases: "Releases",
         navDocs: "Docs",
-        navDownload: "Download v1.1.0 ↗",
-        heroEyebrow: "AUTODESK REVIT 2026 · MCP APP · v1.1.0",
-        heroLead: "AI-driven modeling and zero-token automation for Autodesk Revit 2026 in Google Antigravity. Local Named Pipe bridge with zero Revit restarts, single Ctrl+Z transactions, and 11 hot-load C# DLL modules.",
+        navDownload: "Download v2.0.0 ↗",
+        heroEyebrow: "AUTODESK REVIT 2022–2027 · MCP APP · v2.0.0",
+        heroLead: "AI-driven modeling and zero-token automation for Autodesk Revit 2022–2027 in Google Antigravity. Local Named Pipe bridge, single Ctrl+Z transactions, and 66 compiled C# DLLs (11 modules × 6 Revit versions).",
         heroCtaDownload: "Download Installer (.EXE) ↗",
         heroCtaInstall: "Install Guide ↓",
         heroCtaDocs: "11 DLL Docs",
         heroNote1: "✓ No Admin / UAC Required (Per-User)",
         heroNote2: "✓ 100% Local Windows Named Pipe",
-        heroNote3: "✓ Revit 2026 (.NET 8)",
+        heroNote3: "✓ Revit 2022–2027 (net48 / .NET 8 / .NET 10)",
         specHeader: "RELEASE BUILD SPECIFICATION",
-        specReady: "READY FOR REVIT 2026",
+        specReady: "READY FOR REVIT 2022–2027",
         specOsK: "Platform",
         specRevitK: "BIM Host",
         specPrivK: "Privileges",
         specPrivV: "No UAC / Admin",
         specDateK: "Release Date",
-        specDateV: "Nov 24, 2026",
+        specDateV: "Nov 25, 2026",
         copyBtn: "Copy",
         copiedToast: "Copied to clipboard",
         sec1Eyebrow: "01 / PRODUCT ARCHITECTURE",
-        sec1Title: "Direct Local Channel Between AI and Revit 2026 API",
-        sec1Copy: "Timsco Connector bridges Google Antigravity and a live Autodesk Revit 2026 session over a local MCP server and Windows Named Pipe. Commands marshal through Revit ExternalEvent, while compiled C# modules hot-load into memory without restarting Revit.",
+        sec1Title: "Direct Local Channel Between AI and Revit 2022–2027 API",
+        sec1Copy: "Timsco Connector bridges Google Antigravity and a live Autodesk Revit 2022–2027 session over a local MCP server and version-isolated Windows Named Pipe. Commands marshal through Revit ExternalEvent, while compiled C# modules load into memory without restarting Revit.",
         sec2Eyebrow: "02 / PRODUCT FEATURES",
         sec2Title: "Engineering Automation, Inspector UI & Quota Economy",
-        sec2Copy: "Six integrated subsystems in one lightweight distribution: from parametric structural modeling and facade louvers to automated BIM audits and CAD Light inspection.",
+        sec2Copy: "Six integrated subsystems in one multi-version bundle for Revit 2022–2027: from parametric structural modeling and facade louvers to automated BIM audits and CAD Light inspection.",
         sec3Eyebrow: "03 / INSTALLATION & DEPLOYMENT GUIDE",
         sec3Title: "4-Step Per-User Setup Without Admin Rights",
-        sec3Copy: "Every component—MCP server, CAD Light UI, 11 DLL libraries, Revit 2026 add-in, and uninstaller—ships inside a single native binary: TimscoConnectorSetup_v1.1.0.exe.",
+        sec3Copy: "Every component—MCP server, CAD Light UI, 66 DLL libraries, 6 Revit 2022–2027 add-ins, and uninstaller—ships inside a single native binary: TimscoConnectorSetup_v2.0.0.exe.",
         cliTitle: "IT & ENTERPRISE CLI FLAGS / SILENT DEPLOYMENT",
         cliSub: "Uninstall via Windows Settings → Installed Apps or /uninstall /S",
         sec4Eyebrow: "04 / RELEASES & CHANGELOG",
         sec4Title: "Release History & Distribution Updates",
-        sec4Copy: "Version 1.1.0 introduces full machine portability across Windows workstations, storing large outputs cleanly inside %LOCALAPPDATA%\\TimscoConnector\\out\\.",
+        sec4Copy: "Version 2.0.0 brings full support for Autodesk Revit 2022–2027 with automatic detection of installed Revit releases, isolated dependencies, and zero UAC setup.",
         sec5Eyebrow: "05 / QUICK DOCUMENTATION",
-        sec5Title: "11 DLL Modules (49 Actions), 8 MCP Tools & FAQ",
+        sec5Title: "11 Modules (66 Compiled DLLs · 49 Actions), 8 MCP Tools & FAQ",
         sec5Copy: "All JSON coordinates, lengths, and elevations use millimeters (mm); angles use degrees. Invoke modules via revit_run_script using bare DLL filenames such as DatumTools.dll.",
         searchPlaceholder: "Search DLL, action or description...",
         actionsWord: "actions",
@@ -2156,7 +2051,7 @@
         waSub: "Request consultation on deploying Timsco Connector and BIM automation workflows in your practice.",
         waBtn: "Consult",
         asideTitle: "Architectural Practice & BIM Engineering in Bishkek",
-        asideText: "We build production automation tools for Autodesk Revit 2026 grounded in real-world architectural and structural delivery.",
+        asideText: "We build production automation tools for Autodesk Revit 2022–2027 grounded in real-world architectural and structural delivery.",
         mapBtn: "Office on 2GIS ↗",
         footAbout: "About Us",
         footProjects: "Projects",
@@ -2169,44 +2064,44 @@
     const DATA = {
       metrics: [
         { val: "0", unitRu: "токенов / вызов DLL", unitEn: "tokens / DLL call", descRu: "Прямой запуск готовых DLL из MCP App UI", descEn: "Direct compiled DLL execution from MCP App UI" },
-        { val: "11", unitRu: "DLL-модулей", unitEn: "hot-load DLLs", descRu: "Загрузка AssemblyLoadContext без перезапуска Revit", descEn: "AssemblyLoadContext hot-load without Revit restart" },
+        { val: "2022–2027", unitRu: "6 версий Revit", unitEn: "6 Revit versions", descRu: "Единый пакет: net48, .NET 8 и .NET 10", descEn: "Unified bundle: net48, .NET 8, and .NET 10" },
+        { val: "66", unitRu: "DLL (11 × 6)", unitEn: "compiled DLLs", descRu: "Автовыбор версионной сборки сервером MCP", descEn: "MCP server auto-selects active Revit runtime DLL" },
         { val: "49", unitRu: "BIM-действий", unitEn: "BIM actions", descRu: "Оси, стены, колонны, .rfa, аудит, стыки, фасады", descEn: "Grids, walls, framing, .rfa, audit, joins, louvers" },
-        { val: "3 237", unitRu: "семейств .rfa", unitEn: ".rfa families", descRu: "Библиотеки English (3237) и Russian (29) без диалогов", descEn: "English (3237) & Russian (29) silent .rfa load" },
-        { val: "232 KB", unitRu: "100% локально", unitEn: "100% local pipe", descRu: "Единый EXE-установщик и локальный Named Pipe", descEn: "Single-file EXE installer & local Named Pipe" }
+        { val: "2168 KB", unitRu: "100% локально", unitEn: "100% local pipe", descRu: "Единый EXE-установщик и локальный Named Pipe", descEn: "Single-file EXE installer & local Named Pipe" }
       ],
       archNodes: [
         { num: "01", title: "Google Antigravity", mono: "MCP Host + /image-to-revit", descRu: "Принимает команды, загружает UI-инспектор и оркестрирует BIM-сценарии.", descEn: "Sends prompts/JSON calls, renders MCP App UI, and orchestrates BIM workflows." },
-        { num: "02", title: "RevitMcpServer.exe", mono: "stdio JSON-RPC 2.0", descRu: "8 MCP-инструментов; автоматически находит короткие имена DLL в scripts\\lib\\out\\.", descEn: "Exposes 8 MCP tools and auto-resolves bare DLL names from scripts\\lib\\out\\." },
-        { num: "03", title: "Windows Named Pipe", mono: "\\\\.\\pipe\\rvt-mcp-pipe", descRu: "Локальный высокоскоростной канал IPC без выхода модели в облако.", descEn: "High-speed local IPC channel keeping BIM geometry strictly on your workstation." },
-        { num: "04", title: "RevitMcpAddin.dll", mono: ".NET 8 · ExternalEvent", descRu: "Маршалит команды в основной поток Revit 2026 API (ElementId.Value).", descEn: "Marshals commands safely onto the Revit 2026 API thread (ElementId.Value)." },
-        { num: "05", title: "11 Hot-Load DLLs", mono: "AssemblyLoadContext · Ctrl+Z", descRu: "Выполняет действия в единой Transaction (мм, градусы) с отчётом в %LOCALAPPDATA%.", descEn: "Runs actions inside a single Transaction (mm, deg) with outputs in %LOCALAPPDATA%." }
+        { num: "02", title: "RevitMcpServer.exe", mono: "stdio JSON-RPC 2.0", descRu: "Определяет активный год Revit (2022–2027) и выбирает DLL из scripts\\lib\\out\\<year>\\.", descEn: "Detects active Revit year (2022–2027) and resolves DLLs from scripts\\lib\\out\\<year>\\." },
+        { num: "03", title: "Windows Named Pipe", mono: "\\\\.\\pipe\\rvt-mcp-pipe-<year>", descRu: "Версионно-изолированный локальный канал IPC без выхода модели в облако.", descEn: "Version-isolated local IPC channel keeping BIM geometry strictly on your workstation." },
+        { num: "04", title: "RevitMcpAddin.dll", mono: "net48 / .NET 8 / .NET 10", descRu: "Маршалит команды в основной поток Revit API через слой RevitCompat.", descEn: "Marshals commands safely onto the Revit API thread using RevitCompat." },
+        { num: "05", title: "66 Compiled DLLs", mono: "11 модулей × 6 версий · Ctrl+Z", descRu: "Выполняет действия в единой Transaction (мм, градусы) с отчётом в %LOCALAPPDATA%.", descEn: "Runs actions inside a single Transaction (mm, deg) with outputs in %LOCALAPPDATA%." }
       ],
       principles: [
         { titleRu: "Атомарность Ctrl+Z", titleEn: "Atomic Ctrl+Z", textRu: "Каждая операция изменения объединена в одну Transaction для мгновенного отката.", textEn: "Every write operation runs in one Revit Transaction for single-step undo." },
         { titleRu: "Единицы мм и градусы", titleEn: "Millimeters & Degrees", textRu: "Никаких внутренних футов Revit — весь JSON-обмен ведётся в мм и градусах.", textEn: "No internal Revit feet conversions required — strict mm and degree JSON." },
-        { titleRu: "Без перезапуска Revit", titleEn: "Zero Revit Restarts", textRu: "Выгружаемый AssemblyLoadContext позволяет обновлять и запускать C# DLL на лету.", textEn: "Collectible AssemblyLoadContext hot-loads updated C# DLLs on the fly." },
+        { titleRu: "Совместимость 2022–2027", titleEn: "Revit 2022–2027 Compat", textRu: "RevitCompat унифицирует 32-bit/64-bit ElementId и изоляцию net48 в одной кодовой базе.", textEn: "RevitCompat unifies 32-bit/64-bit ElementId APIs and isolates net48 runtime dependencies." },
         { titleRu: "Приватность модели", titleEn: "100% Local Model", textRu: "Крупные дампы (>50 элементов) остаются в %LOCALAPPDATA%\\TimscoConnector\\out\\.", textEn: "Heavy dumps (>50 elements) stay locally inside %LOCALAPPDATA%\\TimscoConnector\\out\\." }
       ],
       features: [
         {
-          tagRu: "0 ТОКЕНОВ", tagEn: "0 TOKENS",
-          titleRu: "Библиотека 11 DLL-модулей", titleEn: "11 Hot-Load Zero-Token DLLs",
-          descRu: "49 готовых BIM-операций на строгом C# 5.0 для Revit 2026 API (ElementId.Value, мм и градусы). Загружаются в память через AssemblyLoadContext без перезапуска Revit.",
-          descEn: "49 production C# 5.0 BIM actions for Revit 2026 API (ElementId.Value, mm & degrees). Loaded via AssemblyLoadContext without restarting Revit.",
+          tagRu: "0 ТОКЕНОВ · 66 DLL", tagEn: "0 TOKENS · 66 DLLS",
+          titleRu: "Мультиверсионная библиотека 11 модулей", titleEn: "66 Compiled Multi-Version DLLs",
+          descRu: "11 модулей × 6 версий Autodesk Revit 2022–2027 (49 BIM-операций на C# 5.0 через RevitCompat, мм и градусы). Сервер сам выбирает сборку под запущенный Revit.",
+          descEn: "11 modules × 6 Autodesk Revit 2022–2027 targets (49 C# 5.0 BIM actions via RevitCompat, mm & degrees). Server auto-selects the matching DLL.",
           icon: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>'
         },
         {
           tagRu: "MCP APP UI", tagEn: "MCP APP UI",
           titleRu: "Timsco CAD Light Studio UI", titleEn: "Timsco CAD Light Studio UI",
-          descRu: "Встраиваемая панель с секциями Total Numbers, Navigator & Parameters и Quick Scripts & Prompts: мгновенный фильтр элементов, просмотр параметров и вызов DLL в 1 клик.",
-          descEn: "Interactive inspector featuring collapsible Total Numbers, Navigator & Parameters, and Quick Scripts & Prompts tabs for instant filtering and one-click DLL runs.",
+          descRu: "Встраиваемая панель с секциями Total Numbers, Navigator & Parameters и Quick Scripts & Prompts: живой бейдж версии Revit (2022–2027), фильтр элементов и вызов DLL в 1 клик.",
+          descEn: "Interactive inspector featuring collapsible Total Numbers, Navigator & Parameters, Quick Scripts & Prompts, and a live Revit year pill (2022–2027).",
           icon: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>'
         },
         {
           tagRu: "СЕМЕЙСТВА .RFA", tagEn: ".RFA FAMILIES",
           titleRu: "Менеджер библиотек семейств", titleEn: ".rfa Family Browser & Placement",
-          descRu: "Индексирование 3 237 англоязычных и 29 русскоязычных семейств Revit 2026, тихая загрузка через IFamilyLoadOptions и пакетная расстановка экземпляров.",
-          descEn: "Indexes 3,237 English and 29 Russian Revit 2026 .rfa families, silently loads types via IFamilyLoadOptions, and batch-places hosted/unhosted elements.",
+          descRu: "Автоопределение каталога RVT <year>\\Libraries\\English|Russian активной версии Revit (до 3 237 семейств), тихая загрузка через IFamilyLoadOptions и пакетная расстановка.",
+          descEn: "Auto-detects active RVT <year>\\Libraries\\English|Russian paths (up to 3,237 families), silently loads types via IFamilyLoadOptions, and batch-places elements.",
           icon: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>'
         },
         {
@@ -2225,15 +2120,15 @@
         },
         {
           tagRu: "ЭКОНОМИЯ КВОТ", tagEn: "QUOTA ECONOMY",
-          titleRu: "Бережный расход квот и EXE 232 KB", titleEn: "Quota Protection & 232 KB Setup",
-          descRu: "Отчёты >50 элементов пишутся в JSON в %LOCALAPPDATA%\\TimscoConnector\\out\\ вместо контекста ИИ, а весь стек развёртывается из одного 232 KB установщика.",
-          descEn: "Large (>50 item) payloads export to %LOCALAPPDATA%\\TimscoConnector\\out\\ instead of eating LLM tokens, packaged inside a portable 232 KB EXE.",
+          titleRu: "Изолированный Named Pipe и EXE 2168 KB", titleEn: "Versioned Pipes & 2168 KB Setup",
+          descRu: "Версионно-изолированные каналы rvt-mcp-pipe-<year> и дампы >50 элементов в %LOCALAPPDATA%\\TimscoConnector\\out\\. Весь мультиверсионный стек в одном EXE.",
+          descEn: "Version-isolated rvt-mcp-pipe-<year> channels and >50 item exports to %LOCALAPPDATA%\\TimscoConnector\\out\\. Entire 6-version suite in a single EXE.",
           icon: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>'
         }
       ],
       requirements: [
         { kRu: "Операционная система", kEn: "Operating System", vRu: "Windows 10 / 11 (64-bit)", vEn: "Windows 10 / 11 (64-bit)" },
-        { kRu: "Целевая BIM-среда", kEn: "Target BIM Host", vRu: "Autodesk Revit 2026 (.NET 8)", vEn: "Autodesk Revit 2026 (.NET 8)" },
+        { kRu: "Целевая BIM-среда", kEn: "Target BIM Host", vRu: "Autodesk Revit 2022–2027", vEn: "Autodesk Revit 2022–2027" },
         { kRu: "ИИ-клиент", kEn: "AI Client Host", vRu: "Google Antigravity IDE / CLI", vEn: "Google Antigravity IDE / CLI" },
         { kRu: "Права и установка", kEn: "Privileges & Scope", vRu: "Без прав администратора (User Scope)", vEn: "No Admin / UAC Required (Per-User)" }
       ],
@@ -2242,61 +2137,86 @@
           num: "01",
           titleRu: "Скачайте и проверьте дистрибутив",
           titleEn: "Download & Verify the Installer",
-          bodyRu: "Загрузите единый файл TimscoConnectorSetup_v1.1.0.exe (232 KB) и сверьте контрольную сумму SHA-256 для контроля целостности.",
-          bodyEn: "Download the single-file TimscoConnectorSetup_v1.1.0.exe (232 KB) binary and optionally confirm its SHA-256 hash.",
+          bodyRu: "Загрузите единый файл TimscoConnectorSetup_v2.0.0.exe (2168 KB) и сверьте контрольную сумму SHA-256 для контроля целостности.",
+          bodyEn: "Download the single-file TimscoConnectorSetup_v2.0.0.exe (2168 KB) binary and optionally confirm its SHA-256 hash.",
           noteLabelRu: "WINDOWS SMARTSCREEN",
           noteLabelEn: "WINDOWS SMARTSCREEN",
-          noteRu: "Так как сборка v1.1.0 распространяется для проектных студий без платного коммерческого EV-сертификата, при первом запуске нажмите «Подробнее → Выполнить в любом случае».",
-          noteEn: "Because v1.1.0 ships directly for AEC studios without an EV code-signing cert, click \"More info → Run anyway\" if SmartScreen prompts."
+          noteRu: "Так как сборка v2.0.0 распространяется напрямую без платного коммерческого EV-сертификата, при первом запуске нажмите «Подробнее → Выполнить в любом случае».",
+          noteEn: "Because v2.0.0 ships directly for AEC studios without an EV code-signing cert, click \"More info → Run anyway\" if SmartScreen prompts."
         },
         {
           num: "02",
-          titleRu: "Запустите установку без прав администратора",
-          titleEn: "Run Per-User Installation",
-          bodyRu: "Закройте активную сессию Revit 2026 (если Revit запущен, установщик безопасно переименует заблокированные файлы и предупредит о перезапуске) и нажмите «Install». Установка занимает менее 3 секунд и переносит устаревшую папку revit-mcp.",
-          bodyEn: "Close any running Revit 2026 session (locked add-in binaries are staged safely if Revit is open) and click \"Install\". Installs into your user profile in under 3 seconds and cleans up legacy revit-mcp.",
-          noteLabelRu: "ОБНОВЛЕНИЕ ПОВЕРХ v1.0.0",
-          noteLabelEn: "UPGRADING FROM v1.0.0",
-          noteRu: "Повторный запуск установщика безопасно обновляет плагин, все 11 DLL-модулей и надстройку Revit.",
-          noteEn: "Re-running over v1.0.0 cleanly updates the plugin, all 11 DLL modules, and the Revit add-in."
+          titleRu: "Выберите версии Revit и установите (User Scope)",
+          titleEn: "Select Revit Versions & Install (Per-User)",
+          bodyRu: "Закройте активные сессии Revit, отметьте нужные версии (установленные Revit 2022–2027 выбираются автоматически) и нажмите «Install Timsco Connector».",
+          bodyEn: "Close active Revit sessions, verify auto-detected versions (2022–2027 checkboxes pre-selected automatically), and click \"Install Timsco Connector\".",
+          noteLabelRu: "ОБНОВЛЕНИЕ ПОВЕРХ v1.x",
+          noteLabelEn: "UPGRADING FROM v1.x",
+          noteRu: "Установщик автоматически удаляет устаревшую плоскую RevitMcpAddin.dll в корне Addins и размещает сборку в TimscoConnector\\.",
+          noteEn: "Installer automatically cleans legacy root RevitMcpAddin.dll from v1.x and places binaries in Addins\\<year>\\TimscoConnector\\."
         },
         {
           num: "03",
-          titleRu: "Подтвердите надстройку в Autodesk Revit 2026",
-          titleEn: "Trust the Add-In in Autodesk Revit 2026",
-          bodyRu: "Откройте Autodesk Revit 2026. В диалоге безопасности сторонних модулей нажмите «Всегда загружать» (Always Load) для RevitMcpAddin / Timsco Connector.",
-          bodyEn: "Launch Autodesk Revit 2026 and choose \"Always Load\" when Revit prompts for the unsigned external add-in security check.",
+          titleRu: "Подтвердите надстройку в Autodesk Revit 2022–2027",
+          titleEn: "Trust the Add-In in Autodesk Revit 2022–2027",
+          bodyRu: "Откройте нужную версию Autodesk Revit (2022–2027). В диалоге безопасности сторонних модулей нажмите «Всегда загружать» (Always Load) для RevitMcpAddin / Timsco Connector.",
+          bodyEn: "Launch your target Autodesk Revit (2022–2027) and choose \"Always Load\" when Revit prompts for the external add-in security check.",
           noteLabelRu: "АВТОЗАПУСК МОСТА",
           noteLabelEn: "AUTOMATIC BRIDGE",
-          noteRu: "После разрешения канал Named Pipe активируется автоматически при каждом старте Revit 2026.",
-          noteEn: "Once trusted, the local Named Pipe listener starts automatically with every Revit 2026 session."
+          noteRu: "После разрешения канал \\\\.\\pipe\\rvt-mcp-pipe-<year> активируется автоматически и позволяет запускать несколько версий Revit параллельно.",
+          noteEn: "Once trusted, \\\\.\\pipe\\rvt-mcp-pipe-<year> starts automatically, supporting concurrent Revit versions."
         },
         {
           num: "04",
           titleRu: "Откройте Google Antigravity и проверьте связь",
           titleEn: "Launch & Verify in Google Antigravity",
-          bodyRu: "Перезапустите Google Antigravity: MCP-сервер revit и правила AGENTS.md подключатся автоматически. Вызовите панель open_revit_inspector или запустите CleanupTools.dll (model_health).",
-          bodyEn: "Open or reload Google Antigravity: the revit MCP server and AGENTS.md rules register automatically. Trigger open_revit_inspector or run CleanupTools.dll (model_health).",
+          bodyRu: "Перезапустите Google Antigravity: MCP-сервер revit и правила AGENTS.md подключатся автоматически и сами определят активную версию Revit. Вызовите open_revit_inspector или CleanupTools.dll.",
+          bodyEn: "Open or reload Google Antigravity: the revit MCP server and AGENTS.md rules register automatically and detect the live Revit year. Trigger open_revit_inspector or CleanupTools.dll.",
           noteLabelRu: "ДЕИНСТАЛЛЯЦИЯ",
           noteLabelEn: "CLEAN UNINSTALL",
-          noteRu: "Удаление доступно в любое время через «Параметры Windows → Приложения» или ключ /uninstall /S.",
-          noteEn: "Uninstall anytime from Windows Settings → Installed Apps or via CLI /uninstall /S."
+          noteRu: "Удаление всех версий выполняется через «Параметры Windows → Приложения» или ключ /uninstall /S.",
+          noteEn: "Uninstall across all 2022–2027 folders anytime from Windows Settings → Installed Apps or via /uninstall /S."
         }
       ],
       cliFlags: [
-        { cmd: "TimscoConnectorSetup_v1.1.0.exe /S", descRu: "Тихая установка без окон (поддерживаются также /silent и /quiet)", descEn: "Silent unattended install without UI prompts (also accepts /silent, /quiet)" },
-        { cmd: "TimscoConnectorSetup_v1.1.0.exe /uninstall /S", descRu: "Тихое удаление плагина, надстройки Revit и записи HKCU", descEn: "Silent uninstall removing plugin, Revit add-in, and HKCU entry" },
-        { cmd: "TimscoConnectorSetup_v1.1.0.exe /extract C:\\Temp\\TimscoPayload", descRu: "Извлечение файлов для ИБ/IT-аудита и GPO без изменения системы", descEn: "Extract payload for IT audit or GPO/SCCM packaging without installing" },
+        { cmd: "TimscoConnectorSetup_v2.0.0.exe /S", descRu: "Тихая автоустановка для всех обнаруженных на ПК версий Revit 2022–2027", descEn: "Silent unattended install for all auto-detected Revit 2022–2027 versions" },
+        { cmd: "TimscoConnectorSetup_v2.0.0.exe /S /versions 2024,2026", descRu: "Тихая установка строго для указанных версий Revit (поддерживается /versions all)", descEn: "Silent install targeting explicit Revit versions (also accepts /versions all)" },
+        { cmd: "TimscoConnectorSetup_v2.0.0.exe /uninstall /S", descRu: "Тихое удаление плагина, всех надстроек 2022–2027 и записи HKCU", descEn: "Silent uninstall removing plugin, all 2022–2027 add-ins, and HKCU entry" },
+        { cmd: "TimscoConnectorSetup_v2.0.0.exe /extract C:\\Temp\\TimscoPayload", descRu: "Извлечение файлов для ИБ/IT-аудита и GPO без изменения системы", descEn: "Extract payload for IT audit or GPO/SCCM packaging without installing" },
         { cmd: "set TIMSCO_OUT_DIR=D:\\BIM\\TimscoExports", descRu: "Переопределение папки JSON-отчётов, CSV-ведомостей и PNG-снимков", descEn: "Override default output folder for JSON audits, CSV schedules, and PNG renders" }
       ],
       releases: [
         {
-          version: "1.1.0",
+          version: "2.0.0",
           isLatest: true,
-          dateRu: "24.11.2026",
-          dateEn: "Nov 24, 2026",
+          dateRu: "25.11.2026",
+          dateEn: "Nov 25, 2026",
           badgeRu: "ТЕКУЩИЙ РЕЛИЗ",
           badgeEn: "CURRENT RELEASE",
+          summaryRu: "Мультиверсионная архитектура Autodesk Revit 2022–2027 (net48, .NET 8, .NET 10), слой совместимости RevitCompat, 66 версионных DLL (11 × 6), изоляция Named Pipe каналов и умный установщик с /versions.",
+          summaryEn: "Unified multi-version architecture for Autodesk Revit 2022–2027 (net48, .NET 8, .NET 10), RevitCompat layer, 66 compiled DLLs (11 × 6), version-isolated Named Pipes, and /versions installer CLI.",
+          itemsRu: [
+            "Добавлена поддержка 6 версий Autodesk Revit: 2022–2023 (net48 + REVIT_LEGACY_ID), 2024 (net48 + 64-bit ElementId), 2025–2026 (net8.0-windows) и 2027 (net10.0-windows + CurveIntersectResultOption.Detailed).",
+            "Внедрён общий слой src/RevitCompat.cs для совместимости 32-битного IntegerValue и 64-битного Value; скомпилировано 66 модулей в scripts\\lib\\out\\<year>\\.",
+            "Реализованы версионные Named Pipe каналы \\\\.\\pipe\\rvt-mcp-pipe-<year> и изоляция net48-зависимостей (System.Text.Json) внутри Addins\\<year>\\TimscoConnector\\.",
+            "Обновлён установщик TimscoConnectorSetup_v2.0.0.exe (2168 KB): автообнаружение Revit 2022–2027, чекбоксы в GUI, ключ /versions и автоочистка плоской RevitMcpAddin.dll от v1.x.",
+            "FamilyTools.dll (scan_rfa_files) автоматически определяет год запущенного Revit для поиска в C:\\ProgramData\\Autodesk\\RVT <year>\\Libraries\\."
+          ],
+          itemsEn: [
+            "Added full support across 6 Autodesk Revit releases: 2022–2023 (net48 + REVIT_LEGACY_ID), 2024 (net48 + 64-bit ElementId), 2025–2026 (net8.0-windows), and 2027 (net10.0-windows + CurveIntersectResultOption.Detailed).",
+            "Introduced src/RevitCompat.cs unifying 32-bit IntegerValue and 64-bit ElementId.Value across the codebase, compiling 66 DLLs into scripts\\lib\\out\\<year>\\.",
+            "Implemented version-isolated Named Pipes (\\\\.\\pipe\\rvt-mcp-pipe-<year>) and isolated net48 runtime dependencies inside Addins\\<year>\\TimscoConnector\\.",
+            "Upgraded TimscoConnectorSetup_v2.0.0.exe (2168 KB) with auto-detection of Revit 2022–2027, GUI version selector, /versions CLI flag, legacy v1.x cleanup, and multi-version uninstall.",
+            "Updated FamilyTools.dll (scan_rfa_files) to resolve active RVT <year>\\Libraries\\ directories dynamically."
+          ]
+        },
+        {
+          version: "1.1.0",
+          isLatest: false,
+          dateRu: "24.11.2026",
+          dateEn: "Nov 24, 2026",
+          badgeRu: "ПРЕДЫДУЩИЙ РЕЛИЗ",
+          badgeEn: "PREVIOUS RELEASE",
           summaryRu: "Единый нативный EXE-установщик, фирменная айдентика Timsco Partners (изометрический 3D-логотип T), редизайн панели CAD Light Studio, 100% переносимость путей и полный комплект 11 DLL (49 действий).",
           summaryEn: "Single-file native Windows EXE installer, official Timsco Partners isometric 3D T branding, CAD Light Studio UI redesign, 100% machine portability, and complete 11-DLL suite (49 actions).",
           itemsRu: [
@@ -2503,27 +2423,25 @@
         ["revit_run_script", "Hot-Load DLL", "Запуск C# 5.0 DLL в памяти Revit через AssemblyLoadContext (короткое имя DLL + JSON scriptArgs).", "Hot-loads C# 5.0 DLLs in Revit memory via AssemblyLoadContext (bare DLL name + scriptArgs)."]
       ],
       installPaths: [
-        ["%USERPROFILE%\\.gemini\\config\\plugins\\timsco-connector\\", "MCP-сервер (bin\\RevitMcpServer.exe), UI (ui\\app.html), 11 DLL (scripts\\lib\\out\\*.dll), rules\\AGENTS.md, skills\\image-to-revit\\SKILL.md, assets\\, plugin.json, mcp_config.json, UninstallTimscoConnector.exe", "MCP server (bin\\RevitMcpServer.exe), UI (ui\\app.html), 11 DLLs (scripts\\lib\\out\\*.dll), rules\\AGENTS.md, skills\\image-to-revit\\SKILL.md, assets\\, plugin.json, mcp_config.json, UninstallTimscoConnector.exe"],
-        ["%APPDATA%\\Autodesk\\Revit\\Addins\\2026\\", "Манифест RevitMcpAddin.addin и сборка Revit 2026 API (.NET 8) RevitMcpAddin.dll для Named Pipe и AssemblyLoadContext.", "Manifest RevitMcpAddin.addin and .NET 8 Revit 2026 API assembly RevitMcpAddin.dll handling Named Pipe and AssemblyLoadContext."],
+        ["%USERPROFILE%\\.gemini\\config\\plugins\\timsco-connector\\", "MCP-сервер (bin\\RevitMcpServer.exe), UI (ui\\app.html), 66 версионных DLL (scripts\\lib\\out\\<year>\\*.dll), src\\RevitCompat.cs, rules\\AGENTS.md, skills\\image-to-revit\\SKILL.md, assets\\, UninstallTimscoConnector.exe", "MCP server (bin\\RevitMcpServer.exe), UI (ui\\app.html), 66 per-year DLLs (scripts\\lib\\out\\<year>\\*.dll), src\\RevitCompat.cs, rules\\AGENTS.md, skills\\image-to-revit\\SKILL.md, assets\\, UninstallTimscoConnector.exe"],
+        ["%APPDATA%\\Autodesk\\Revit\\Addins\\<year>\\", "Манифест RevitMcpAddin.addin и папка TimscoConnector\\ с RevitMcpAddin.dll (2022–2027; для 2022–2024 с изолированными net48-зависимостями).", "Manifest RevitMcpAddin.addin and isolated TimscoConnector\\ folder containing RevitMcpAddin.dll (2022–2027; plus isolated net48 runtime deps for 2022–2024)."],
         ["%LOCALAPPDATA%\\TimscoConnector\\out\\", "JSON-отчёты (>50 элементов), спецификации ;-CSV с UTF-8 BOM (schedules\\) и PNG-снимки (snapshots\\). Меняется через TIMSCO_OUT_DIR.", "Large (>50 item) JSON dumps, semicolon UTF-8 BOM CSV schedules (schedules\\), and PNG renders (snapshots\\). Overridable via TIMSCO_OUT_DIR."]
       ],
       faq: [
-        ["Почему Windows SmartScreen показывает предупреждение при запуске .exe?", "Why does Windows SmartScreen warn when launching the .exe?", "Сборка v1.1.0 распространяется напрямую от Timsco Partners LLC без платной коммерческой подписи EV Code Signing. Вы всегда можете сверить SHA-256 файла на этой странице или распаковать содержимое без установки через «/extract C:\\Temp\\TimscoPayload».", "The v1.1.0 installer ships directly without a paid EV Code Signing certificate. Verify the file SHA-256 on this page or inspect the embedded payload safely prior to install via \"/extract C:\\Temp\\TimscoPayload\"."],
-        ["Нужно ли перезапускать Revit 2026 после обновления скриптов или вызова DLL?", "Do I have to restart Revit 2026 when running or updating DLL scripts?", "Нет. Надстройка RevitMcpAddin загружает скомпилированные DLL через выгружаемый AssemblyLoadContext на лету. Перезапуск Revit требуется один раз после первичной установки или обновления самой надстройки через EXE.", "No. RevitMcpAddin loads compiled C# DLLs dynamically via collectible AssemblyLoadContext. Restarting Revit 2026 is only required once after installing or upgrading the add-in via the EXE setup."],
+        ["Почему Windows SmartScreen показывает предупреждение при запуске .exe?", "Why does Windows SmartScreen warn when launching the .exe?", "Сборка v2.0.0 распространяется напрямую от Timsco Partners LLC без платной коммерческой подписи EV Code Signing. Вы всегда можете сверить SHA-256 файла на этой странице или распаковать содержимое без установки через «/extract C:\\Temp\\TimscoPayload».", "The v2.0.0 installer ships directly without a paid EV Code Signing certificate. Verify the file SHA-256 on this page or inspect the embedded payload safely prior to install via \"/extract C:\\Temp\\TimscoPayload\"."],
+        ["Нужно ли перезапускать Revit после обновления скриптов или вызова DLL?", "Do I have to restart Revit when running or updating DLL scripts?", "Нет. Надстройка RevitMcpAddin загружает скомпилированные DLL динамически (AssemblyLoadContext в Revit 2025–2027, изолированная загрузка в 2022–2024). Перезапуск Revit требуется один раз после установки или обновления самой надстройки через EXE.", "No. RevitMcpAddin loads compiled C# DLLs dynamically (AssemblyLoadContext on Revit 2025–2027, isolated loader on 2022–2024). Restarting Revit is only required once after installing or upgrading the add-in via the EXE setup."],
         ["Почему вызовы библиотеки DLL экономят токены и квоты AI?", "How does the DLL library reduce LLM token consumption?", "Сложная логика Revit API (поиск коллизий, автонумерация, стыки геометрии, ламели витражей) уже скомпилирована в C# DLL. Кнопки в окне open_revit_inspector запускают их вообще за 0 LLM-токенов, а AI передаёт только короткий JSON параметров.", "Complex Revit API logic (clashes, renumbering, join order, louver geometry) is pre-compiled in C# DLLs. Triggers inside open_revit_inspector run with 0 LLM tokens, while AI tasks pass only compact JSON parameters."],
         ["Где сохраняются крупные отчёты JSON и спецификации CSV?", "Where are JSON audits, CSV schedules, and PNG screenshots saved?", "По умолчанию все файлы пишутся в %LOCALAPPDATA%\\TimscoConnector\\out\\ (спецификации — в schedules\\). Для корпоративных папок задайте переменную окружения TIMSCO_OUT_DIR.", "All exports default to %LOCALAPPDATA%\\TimscoConnector\\out\\ (schedules in schedules\\). For shared network drives, set the TIMSCO_OUT_DIR environment variable."],
-        ["Поддерживается ли полная библиотека семейств Revit 2026 (Libraries\\English)?", "Does FamilyTools work with both Russian and English Revit .rfa libraries?", "Да. По умолчанию scan_rfa_files ищет в Libraries\\Russian (29 файлов), а для доступа ко всем 3 237 семействам передайте folder: C:\\ProgramData\\Autodesk\\RVT 2026\\Libraries\\English. Загрузка проходит тихо без модальных окон.", "Yes. By default scan_rfa_files scans Libraries\\Russian (29 files), and all 3,237 English families are indexed by setting folder to C:\\ProgramData\\Autodesk\\RVT 2026\\Libraries\\English. Family loading suppresses modal prompts automatically."],
+        ["Поддерживается ли полная библиотека семейств Revit (Libraries\\English)?", "Does FamilyTools work with both Russian and English Revit .rfa libraries?", "Да. FamilyTools.dll автоматически определяет год активного Revit (2022–2027) и сканирует Libraries\\Russian или Libraries\\English при передаче folder. Загрузка проходит тихо без модальных окон.", "Yes. FamilyTools.dll detects the running Revit year (2022–2027) and scans Libraries\\Russian or Libraries\\English when passing folder. Family loading suppresses modal prompts automatically."],
         ["Уходит ли 3D-модель или геометрия Revit во внешнее облако?", "Is our Revit BIM model uploaded to any external server?", "Нет. Взаимодействие между RevitMcpAddin и RevitMcpServer проходит строго локально через Windows Named Pipe. Дампы (>50 элементов) сохраняются на диск и не попадают в облачный контекст без явного действия пользователя.", "No. Communication between RevitMcpAddin and RevitMcpServer is 100% local over a Windows Named Pipe. Large element dumps (>50 items) stay on disk and are never uploaded unless you explicitly attach them."]
       ]
     };
 
     const STATE = {
       lang: "ru",
-      embed: false,
       filter: "all",
       query: "",
-      downloadUrl: DOWNLOAD_URL,
-      lastPostedHeight: 0
+      downloadUrl: DOWNLOAD_URL
     };
 
     function sanitizeDownloadUrl(raw) {
@@ -2580,20 +2498,6 @@
       cb();
     }
 
-    function notifyIframeHeight() {
-      const root = document.getElementById("page-root");
-      if (!root) return;
-      const h = Math.ceil(root.getBoundingClientRect().height);
-      if (h > 0 && Math.abs(h - STATE.lastPostedHeight) >= 2) {
-        STATE.lastPostedHeight = h;
-        try {
-          if (window.parent && window.parent !== window) {
-            window.parent.postMessage({ type: "timsco-connector:resize", height: h }, "*");
-          }
-        } catch (e) {}
-      }
-    }
-
     function renderStaticTranslations() {
       const dict = I18N[STATE.lang];
       document.documentElement.lang = STATE.lang;
@@ -2613,7 +2517,7 @@
 
       document.querySelectorAll("[data-download-link]").forEach((link) => {
         link.setAttribute("href", STATE.downloadUrl);
-        link.setAttribute("download", "TimscoConnectorSetup_v1.1.0.exe");
+        link.setAttribute("download", "TimscoConnectorSetup_v2.0.0.exe");
       });
     }
 
@@ -2704,7 +2608,7 @@
       const ru = STATE.lang === "ru";
       const ctaText = I18N[STATE.lang].heroCtaDownload;
       const copyLabel = I18N[STATE.lang].copyBtn;
-      const sha = "d70f9807fe637634257f2bbf8975eb7dd990ee7ce119de64521397790be53a47";
+      const sha = "f3d8d1420ec1c38f9c9e37593e134dd99ef167da5696a977e30e919f8fd48998";
 
       document.getElementById("releases-list").innerHTML = DATA.releases.map((r) => {
         const items = ru ? r.itemsRu : r.itemsEn;
@@ -2716,7 +2620,7 @@
                 <span class="eyebrow ${r.isLatest ? "eyebrow--cobalt" : ""}">${escapeHtml(ru ? r.badgeRu : r.badgeEn)}</span>
                 <span class="release-date">${escapeHtml(ru ? r.dateRu : r.dateEn)}</span>
               </div>
-              ${r.isLatest ? `<a href="${escapeHtml(STATE.downloadUrl)}" download="TimscoConnectorSetup_v1.1.0.exe" class="btn btn--primary btn--sm" data-download-link>${escapeHtml(ctaText)}</a>` : ""}
+              ${r.isLatest ? `<a href="${escapeHtml(STATE.downloadUrl)}" download="TimscoConnectorSetup_v2.0.0.exe" class="btn btn--primary btn--sm" data-download-link>${escapeHtml(ctaText)}</a>` : ""}
             </div>
             <p class="release-summary">${escapeHtml(ru ? r.summaryRu : r.summaryEn)}</p>
             <ul class="release-list">
@@ -2724,7 +2628,7 @@
             </ul>
             ${r.isLatest ? `
               <div class="release-artifact-bar">
-                <span><strong>TimscoConnectorSetup_v1.1.0.exe</strong> · 232 KB (237 568 bytes) · SHA-256: ${sha.slice(0, 16)}…${sha.slice(-12)}</span>
+                <span><strong>TimscoConnectorSetup_v2.0.0.exe</strong> · 2168 KB (2 219 520 bytes) · SHA-256: ${sha.slice(0, 16)}…${sha.slice(-12)}</span>
                 <button type="button" class="copy-mini-btn copy-mini-btn--light" data-copy-text="${sha}">${escapeHtml(copyLabel)} SHA-256</button>
               </div>
             ` : ""}
@@ -2762,7 +2666,6 @@
       const grid = document.getElementById("dll-grid");
       if (filtered.length === 0) {
         grid.innerHTML = `<div class="empty-state">${escapeHtml(I18N[STATE.lang].noMatches)}</div>`;
-        notifyIframeHeight();
         return;
       }
 
@@ -2804,8 +2707,6 @@
           </div>
         </article>
       `).join("");
-
-      notifyIframeHeight();
     }
 
     function renderDocsTablesAndFaq() {
@@ -2832,10 +2733,6 @@
           <div class="faq-body">${escapeHtml(ru ? item[2] : item[3])}</div>
         </details>
       `).join("");
-
-      document.querySelectorAll("#faq-list details").forEach((d) => {
-        d.addEventListener("toggle", () => requestAnimationFrame(notifyIframeHeight));
-      });
     }
 
     function renderAll() {
@@ -2848,7 +2745,6 @@
       renderFilterTabs();
       renderDllModules();
       renderDocsTablesAndFaq();
-      requestAnimationFrame(notifyIframeHeight);
     }
 
     function setLanguage(lang) {
@@ -2868,11 +2764,6 @@
           const saved = localStorage.getItem("timsco_connector_lang");
           if (saved === "en" || saved === "ru") STATE.lang = saved;
         } catch (e) {}
-      }
-
-      if (params.get("embed") === "1") {
-        STATE.embed = true;
-        document.body.classList.add("embed-mode");
       }
 
       const customDl = params.get("downloadUrl");
@@ -2927,15 +2818,6 @@
           menuBtn.setAttribute("aria-expanded", String(isOpen));
         });
       }
-
-      if (typeof ResizeObserver !== "undefined") {
-        const ro = new ResizeObserver(() => requestAnimationFrame(notifyIframeHeight));
-        ro.observe(document.getElementById("page-root"));
-      }
-      window.addEventListener("load", () => {
-        notifyIframeHeight();
-        setTimeout(notifyIframeHeight, 300);
-      });
     }
 
     initApp();
