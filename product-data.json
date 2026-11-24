@@ -1,0 +1,612 @@
+{
+  "product": {
+    "name": "Timsco Connector",
+    "version": "1.1.0",
+    "releaseDate": "2026-11-24",
+    "releaseDateDisplayRu": "24.11.2026",
+    "releaseDateDisplayEn": "Nov 24, 2026",
+    "revitVersion": "2026",
+    "os": "Windows 10 / 11 (64-bit)",
+    "privilegesRu": "Права администратора не требуются (установка в профиль пользователя)",
+    "privilegesEn": "No Admin / UAC required (per-user profile installation)",
+    "installer": {
+      "fileName": "TimscoConnectorSetup_v1.1.0.exe",
+      "sizeBytes": 237568,
+      "sizeLabel": "232 KB",
+      "sha256": "d70f9807fe637634257f2bbf8975eb7dd990ee7ce119de64521397790be53a47",
+      "downloadUrl": "https://github.com/sayedibraimov/timsco-connector/releases/download/v1.1.0/TimscoConnectorSetup_v1.1.0.exe",
+      "defaultRelativeUrl": "https://github.com/sayedibraimov/timsco-connector/releases/download/v1.1.0/TimscoConnectorSetup_v1.1.0.exe",
+      "webflowHostingNoteRu": "Платформа Webflow Assets не принимает .exe файлы. Загрузите TimscoConnectorSetup_v1.1.0.exe в GitHub Releases, Cloudflare R2 или AWS S3 и укажите прямую ссылку в константе DOWNLOAD_URL (или через ?downloadUrl=...).",
+      "webflowHostingNoteEn": "Webflow Assets rejects .exe uploads. Host TimscoConnectorSetup_v1.1.0.exe on GitHub Releases, Cloudflare R2, or AWS S3 and set DOWNLOAD_URL (or ?downloadUrl=...) accordingly."
+    },
+    "taglineRu": "ИИ-моделирование и 0-токеновая автоматизация Autodesk Revit 2026 для Google Antigravity",
+    "taglineEn": "AI-Driven Modeling & Zero-Token Automation for Autodesk Revit 2026 in Google Antigravity"
+  },
+  "metrics": [
+    {
+      "value": "0",
+      "unitRu": "токенов / вызов DLL",
+      "unitEn": "tokens / DLL call",
+      "captionRu": "Запуск готовых DLL через MCP App или прямой вызов",
+      "captionEn": "Execute compiled DLLs via MCP App or direct invoke"
+    },
+    {
+      "value": "11",
+      "unitRu": "DLL-модулей",
+      "unitEn": "hot-load DLLs",
+      "captionRu": "Динамическая загрузка в память без перезапуска Revit",
+      "captionEn": "AssemblyLoadContext hot-load with zero Revit restarts"
+    },
+    {
+      "value": "49",
+      "unitRu": "BIM-действий",
+      "unitEn": "BIM actions",
+      "captionRu": "Оси, стены, колонны, витражи, аудит, стыки, спецификации",
+      "captionEn": "Grids, walls, framing, louvers, audit, joins, schedules"
+    },
+    {
+      "value": "3 237",
+      "unitRu": "семейств .rfa",
+      "unitEn": ".rfa families",
+      "captionRu": "Библиотеки English (3237) и Russian (29) без диалогов",
+      "captionEn": "English (3237) & Russian (29) libraries, silent load"
+    },
+    {
+      "value": "232 KB",
+      "unitRu": "100% локально",
+      "unitEn": "100% local pipe",
+      "captionRu": "Единый EXE-установщик и локальный Named Pipe",
+      "captionEn": "Single-file EXE setup & local Windows Named Pipe"
+    }
+  ],
+  "features": [
+    {
+      "id": "zero-token-dlls",
+      "tagRu": "0 ТОКЕНОВ",
+      "tagEn": "0 TOKENS",
+      "titleRu": "Библиотека 11 DLL-модулей",
+      "titleEn": "11 Hot-Load Zero-Token DLLs",
+      "descRu": "49 готовых BIM-операций на строгом C# 5.0 для Revit 2026 API (`ElementId.Value`, миллиметры и градусы, единая транзакция Ctrl+Z). Загружаются в память через `AssemblyLoadContext` без перезапуска Revit.",
+      "descEn": "49 production C# 5.0 BIM actions for Revit 2026 API (`ElementId.Value`, mm & degrees, single Ctrl+Z transaction). Loaded dynamically via `AssemblyLoadContext` without restarting Revit."
+    },
+    {
+      "id": "cad-light-ui",
+      "tagRu": "MCP APP UI",
+      "tagEn": "MCP APP UI",
+      "titleRu": "Интерфейс Timsco CAD Light Studio",
+      "titleEn": "Timsco CAD Light Studio UI",
+      "descRu": "Встраиваемая панель инспектора с секциями Total Numbers, Navigator & Parameters и Quick Scripts & Prompts: мгновенный фильтр элементов, просмотр параметров и запуск DLL в один клик.",
+      "descEn": "Embedded inspector panel featuring collapsible Total Numbers, Navigator & Parameters, and Quick Scripts & Prompts tabs for instant filtering, parameter review, and one-click DLL execution."
+    },
+    {
+      "id": "family-manager",
+      "tagRu": "СЕМЕЙСТВА .RFA",
+      "tagEn": ".RFA FAMILIES",
+      "titleRu": "Менеджер библиотек семейств",
+      "titleEn": ".rfa Family Browser & Placement",
+      "descRu": "Индексирование 3 237 англоязычных и 29 русскоязычных семейств Revit 2026, тихая загрузка через `IFamilyLoadOptions` и пакетная расстановка свободных и зависимых экземпляров.",
+      "descEn": "Indexes 3,237 English and 29 Russian Revit 2026 `.rfa` families, loads them silently via `IFamilyLoadOptions`, and batch-places hosted and unhosted instances."
+    },
+    {
+      "id": "visual-modeling",
+      "tagRu": "ВИЗУАЛЬНЫЙ ИИ",
+      "tagEn": "VISION BIM",
+      "titleRu": "Навык /image-to-revit и Quad-рендер",
+      "titleEn": "/image-to-revit & 4-Angle Quad Render",
+      "descRu": "Воссоздание планов, фасадов и интерьеров по референсу или подложке с автоматической недеструктивной проверкой модели в 4 ракурсах (`export_quad_png` с откатом транзакции).",
+      "descEn": "Reconstructs plans, facades, and assemblies from reference images with non-destructive 4-view visual self-verification (`export_quad_png` via rolled-back transaction)."
+    },
+    {
+      "id": "qa-facades",
+      "tagRu": "QA И ФАСАДЫ",
+      "tagEn": "QA & FACADES",
+      "titleRu": "Аудит BIM, стыки и фасадные ламели",
+      "titleEn": "BIM QA, Auto-Join & Facade Louvers",
+      "descRu": "Сводка предупреждений, поиск 3D-коллизий, проверка помещений, приоритетное соединение геометрии (`arch_standard`) и генерация 3D-ламелей `Lover Panel_Mech` для косоугольных ячеек витражей.",
+      "descEn": "Warning clustering, 3D clash detection, room audits, architectural cut-order joining (`arch_standard`), and 125mm DirectShape `Lover Panel_Mech` louvers for slanted curtain panels."
+    },
+    {
+      "id": "quota-portable",
+      "tagRu": "ЭКОНОМИЯ КВОТ",
+      "tagEn": "QUOTA ECONOMY",
+      "titleRu": "Оптимизация токенов и единый дистрибутив",
+      "titleEn": "Token Economy & Portable EXE Setup",
+      "descRu": "Выгрузки >50 элементов сохраняются в `%LOCALAPPDATA%\\TimscoConnector\\out\\` (а не в контекст LLM), экономя квоту Antigravity. Полный стек упакован в портативный EXE весом 232 KB.",
+      "descEn": "Exports exceeding 50 elements stream to `%LOCALAPPDATA%\\TimscoConnector\\out\\` instead of flooding LLM context. Entire stack ships as a self-contained 232 KB installer."
+    }
+  ],
+  "requirements": [
+    {
+      "labelRu": "Операционная система",
+      "labelEn": "Operating System",
+      "valueRu": "Windows 10 / 11 (64-bit)",
+      "valueEn": "Windows 10 / 11 (64-bit)"
+    },
+    {
+      "labelRu": "Целевая BIM-среда",
+      "labelEn": "Target BIM Host",
+      "valueRu": "Autodesk Revit 2026 (.NET 8)",
+      "valueEn": "Autodesk Revit 2026 (.NET 8)"
+    },
+    {
+      "labelRu": "ИИ-клиент",
+      "labelEn": "AI Client Host",
+      "valueRu": "Google Antigravity IDE / CLI",
+      "valueEn": "Google Antigravity IDE / CLI"
+    },
+    {
+      "labelRu": "Права и установка",
+      "labelEn": "Privileges & Setup",
+      "valueRu": "Без прав администратора (User Scope)",
+      "valueEn": "No Admin / UAC Required (Per-User)"
+    }
+  ],
+  "installSteps": [
+    {
+      "num": "01",
+      "titleRu": "Скачайте и проверьте дистрибутив",
+      "titleEn": "Download & Verify the Installer",
+      "bodyRu": "Загрузите единый установщик TimscoConnectorSetup_v1.1.0.exe (232 KB) и при необходимости сверьте контрольную сумму SHA-256.",
+      "bodyEn": "Download the single-file TimscoConnectorSetup_v1.1.0.exe (232 KB) installer and verify its SHA-256 checksum.",
+      "noteRu": "Windows SmartScreen: поскольку сборка v1.1.0 распространяется для студий без коммерческого EV-сертификата, нажмите «Подробнее → Выполнить в любом случае».",
+      "noteEn": "Windows SmartScreen: because v1.1.0 is an internal studio binary without an EV code-signing certificate, click \"More info → Run anyway\"."
+    },
+    {
+      "num": "02",
+      "titleRu": "Запустите установку без прав администратора",
+      "titleEn": "Run Per-User Installation",
+      "bodyRu": "Закройте активную сессию Revit 2026 (при запущенном Revit установщик переименует заблокированные файлы и предупредит о перезапуске) и нажмите «Install». Установка в профиль пользователя занимает меньше 3 секунд и автоматически переносит устаревший плагин revit-mcp.",
+      "bodyEn": "Close any active Revit 2026 session (if Revit is open, locked add-in files are safely staged and flagged for restart) and click \"Install\". Installs into your user profile in under 3 seconds and migrates legacy revit-mcp automatically.",
+      "noteRu": "Повторный запуск установщика поверх v1.0.0 безопасно обновляет плагин, DLL-библиотеки и манифест Revit.",
+      "noteEn": "Running over v1.0.0 cleanly updates the plugin, DLL suite, and Revit add-in manifest in place."
+    },
+    {
+      "num": "03",
+      "titleRu": "Подтвердите надстройку в Autodesk Revit 2026",
+      "titleEn": "Trust the Add-In in Autodesk Revit 2026",
+      "bodyRu": "Откройте Autodesk Revit 2026. При первом запуске появится окно безопасности сторонних надстроек — выберите «Всегда загружать» (Always Load) для модуля Timsco Connector / RevitMcpAddin.",
+      "bodyEn": "Launch Autodesk Revit 2026. On first startup, click \"Always Load\" in Revit's external add-in security dialog for Timsco Connector / RevitMcpAddin.",
+      "noteRu": "После загрузки фоновый Named Pipe мост запускается автоматически вместе с Revit.",
+      "noteEn": "Once trusted, the local Named Pipe bridge starts automatically with every Revit 2026 session."
+    },
+    {
+      "num": "04",
+      "titleRu": "Подключите и проверьте работу в Google Antigravity",
+      "titleEn": "Launch & Verify in Google Antigravity",
+      "bodyRu": "Откройте или перезапустите Google Antigravity. MCP-сервер `revit` и правило `AGENTS.md` подключаются автоматически. Вызовите `open_revit_inspector` или выполните 0-токеновую проверку `CleanupTools.dll` (`model_health`).",
+      "bodyEn": "Open or reload Google Antigravity. The `revit` MCP server and `AGENTS.md` workspace rules register automatically. Open `open_revit_inspector` or test zero-token `CleanupTools.dll` (`model_health`).",
+      "noteRu": "Удаление выполняется штатно через «Параметры Windows → Приложения» или флагом `/uninstall /S`.",
+      "noteEn": "Clean removal is supported anytime via Windows Settings → Installed Apps or CLI flag `/uninstall /S`."
+    }
+  ],
+  "cliFlags": [
+    {
+      "command": "TimscoConnectorSetup_v1.1.0.exe /S",
+      "descRu": "Тихая автоматическая установка без окон (также /silent, /quiet)",
+      "descEn": "Silent unattended installation without UI prompts (also /silent, /quiet)"
+    },
+    {
+      "command": "TimscoConnectorSetup_v1.1.0.exe /uninstall /S",
+      "descRu": "Тихое полное удаление плагина, надстройки Revit и записи реестра HKCU",
+      "descEn": "Silent full uninstall of plugin, Revit add-in, and HKCU registry entry"
+    },
+    {
+      "command": "TimscoConnectorSetup_v1.1.0.exe /extract C:\\Temp\\TimscoPayload",
+      "descRu": "Распаковка содержимого без изменения профиля пользователя (для IT-аудита и GPO)",
+      "descEn": "Extract embedded payload without modifying user profile (for IT audit / SCCM / GPO)"
+    },
+    {
+      "command": "set TIMSCO_OUT_DIR=D:\\BIM\\TimscoExports",
+      "descRu": "Переопределение папки JSON-отчётов, спецификаций CSV и PNG-снимков",
+      "descEn": "Override default output directory for JSON audits, CSV schedules, and PNG renders"
+    }
+  ],
+  "installPaths": [
+    {
+      "path": "%USERPROFILE%\\.gemini\\config\\plugins\\timsco-connector\\",
+      "contentsRu": "MCP-сервер (`bin\\RevitMcpServer.exe`), UI-приложение (`ui\\app.html`), 11 DLL (`scripts\\lib\\out\\*.dll`), `rules\\AGENTS.md`, `skills\\image-to-revit\\SKILL.md`, `assets\\`, `plugin.json`, `mcp_config.json`, `UninstallTimscoConnector.exe`",
+      "contentsEn": "MCP server (`bin\\RevitMcpServer.exe`), UI panel (`ui\\app.html`), 11 DLLs (`scripts\\lib\\out\\*.dll`), `rules\\AGENTS.md`, `skills\\image-to-revit\\SKILL.md`, `assets\\`, `plugin.json`, `mcp_config.json`, `UninstallTimscoConnector.exe`"
+    },
+    {
+      "path": "%APPDATA%\\Autodesk\\Revit\\Addins\\2026\\",
+      "contentsRu": "Манифест `RevitMcpAddin.addin` и сборка Revit 2026 API (.NET 8) `RevitMcpAddin.dll` для Named Pipe и `AssemblyLoadContext`",
+      "contentsEn": "Manifest `RevitMcpAddin.addin` and .NET 8 Revit 2026 bridge assembly `RevitMcpAddin.dll` handling Named Pipe and `AssemblyLoadContext`"
+    },
+    {
+      "path": "%LOCALAPPDATA%\\TimscoConnector\\out\\",
+      "contentsRu": "JSON-дампы аудита (`>50` элементов), спецификации `;`-CSV с UTF-8 BOM (`schedules\\`) и снимки видов PNG (`snapshots\\`, переопределяется `TIMSCO_OUT_DIR`)",
+      "contentsEn": "Large (`>50` item) audit JSON dumps, `;`-delimited UTF-8 BOM CSV schedules (`schedules\\`), and PNG renders (`snapshots\\`, overridable via `TIMSCO_OUT_DIR`)"
+    }
+  ],
+  "releases": [
+    {
+      "slug": "v1-1-0",
+      "version": "1.1.0",
+      "releaseDate": "2026-11-24",
+      "dateDisplayRu": "24.11.2026",
+      "dateDisplayEn": "Nov 24, 2026",
+      "statusRu": "Текущий релиз",
+      "statusEn": "Current Release",
+      "isLatest": true,
+      "installerFile": "TimscoConnectorSetup_v1.1.0.exe",
+      "installerSize": "232 KB",
+      "sha256": "d70f9807fe637634257f2bbf8975eb7dd990ee7ce119de64521397790be53a47",
+      "summaryRu": "Единый нативный EXE-установщик, фирменный айдентити Timsco Partners (3D-логотип T), полностью переработанный CAD Light Studio UI, 100% переносимость путей и полная библиотека 11 DLL-модулей (49 действий).",
+      "summaryEn": "Single-file native Windows EXE installer, official Timsco Partners isometric 3D T branding, redesigned Timsco CAD Light Studio UI, 100% user-path portability, and complete 11-DLL suite (49 actions).",
+      "highlightsRu": [
+        "Собран единый нативный Windows-установщик TimscoConnectorSetup_v1.1.0.exe (232 KB) без прав администратора, с тихими флагами /S, /uninstall /S, /extract и регистрацией в «Приложениях Windows».",
+        "Обновлена визуальная айдентика Timsco Partners LLC (Бишкек): изометрический 3D-логотип T во всех артефактах (.svg, .png, .ico) и в заголовках EXE/UI.",
+        "Редизайн панели Timsco CAD Light Studio UI (ui/app.html): добавлены сворачиваемые секции Total Numbers и Navigator & Parameters, вкладка Families (.rfa браузер), панель Quick Scripts & Prompts без эмодзи, выровненный 28px header и чистый footer.",
+        "Полная переносимость между ПК: удалены все локальные пути разработчика; выходные дампы переведены на %LOCALAPPDATA%\\TimscoConnector\\out\\ (и TIMSCO_OUT_DIR), а сервер разрешает короткие имена DLL из scripts\\lib\\out\\.",
+        "Собран полный набор из 11 горяче-загружаемых DLL (49 действий): добавлены и отлажены AuditTools, ParamTools, JoinTools, CleanupTools и LouverPanelTools (Lover Panel_Mech 125 мм) + навык /image-to-revit."
+      ],
+      "highlightsEn": [
+        "Packaged single-file native Windows installer TimscoConnectorSetup_v1.1.0.exe (232 KB) requiring no UAC/Admin, supporting /S, /uninstall /S, /extract, and Windows Apps registration.",
+        "Unified Timsco Partners LLC (Bishkek) branding with custom isometric 3D T icon (.svg, .png, .ico) embedded in the EXE, MCP server, UI, and documentation.",
+        "Redesigned Timsco CAD Light Studio UI (ui/app.html): collapsible Total Numbers & Navigator & Parameters sections, interactive Families tab, emoji-free Quick Scripts & Prompts, 28px aligned header actions, and refined footer.",
+        "100% machine-portable paths: stripped all local developer paths, moved outputs to %LOCALAPPDATA%\\TimscoConnector\\out\\ (overridable via TIMSCO_OUT_DIR), and enabled bare-name DLL resolution from scripts\\lib\\out\\.",
+        "Completed 11 hot-load zero-token DLLs (49 BIM actions) including AuditTools, ParamTools, JoinTools, CleanupTools, LouverPanelTools (125mm DirectShape), and the /image-to-revit visual skill."
+      ]
+    },
+    {
+      "slug": "v1-0-0",
+      "version": "1.0.0",
+      "releaseDate": "2026-11-18",
+      "dateDisplayRu": "18.11.2026",
+      "dateDisplayEn": "Nov 18, 2026",
+      "statusRu": "Первый релиз",
+      "statusEn": "Initial Release",
+      "isLatest": false,
+      "installerFile": "—",
+      "installerSize": "—",
+      "sha256": "—",
+      "summaryRu": "Базовый мост Autodesk Revit 2026 ↔ Google Antigravity на Named Pipe, первые 8 инструментов MCP, загрузчик скриптов AssemblyLoadContext и стартовые модули моделирования.",
+      "summaryEn": "Foundational Autodesk Revit 2026 ↔ Google Antigravity Named Pipe bridge, initial 8 MCP tools, AssemblyLoadContext hot-loader, and core BIM modeling modules.",
+      "highlightsRu": [
+        "Реализован MCP-сервер RevitMcpServer (stdio JSON-RPC) и надстройка RevitMcpAddin (.NET 8 / Revit 2026 API) с механизмом ExternalEvent для потокобезопасного изменения модели.",
+        "Добавлен инструмент revit_run_script с горячей выгрузкой/загрузкой сборок в изолированный AssemblyLoadContext без перезапуска Revit.",
+        "Реализованы первые 8 MCP-инструментов (open_revit_inspector, revit_get_status, revit_query_elements, revit_modify_parameter, revit_audit_warnings, revit_list_types, revit_create_ceilings_from_floors, revit_run_script).",
+        "Выпущены базовые модули DatumTools, ArchModelTools, StructModelTools, FamilyTools, ElementOpsTools, ViewTools и первая версия LouverPanelTools."
+      ],
+      "highlightsEn": [
+        "Built RevitMcpServer (stdio JSON-RPC) and .NET 8 RevitMcpAddin using ExternalEvent marshaling for thread-safe Revit 2026 model transactions.",
+        "Added revit_run_script supporting in-memory C# assembly loading via collectible AssemblyLoadContext with zero Revit restarts.",
+        "Shipped core 8 MCP tools (open_revit_inspector, revit_get_status, revit_query_elements, revit_modify_parameter, revit_audit_warnings, revit_list_types, revit_create_ceilings_from_floors, revit_run_script).",
+        "Released foundational modeling DLLs: DatumTools, ArchModelTools, StructModelTools, FamilyTools, ElementOpsTools, ViewTools, and initial LouverPanelTools."
+      ]
+    }
+  ],
+  "modules": [
+    {
+      "slug": "datum-tools",
+      "order": 1,
+      "dll": "DatumTools.dll",
+      "filterGroup": "modeling",
+      "categoryRu": "Моделирование",
+      "categoryEn": "Modeling",
+      "actionCount": 3,
+      "titleRu": "Уровни и сетки осей",
+      "titleEn": "Levels & Structural Grids",
+      "summaryRu": "Чтение, создание уровней с планами этажей (пропуск дублей в пределах 5 мм) и параметрических координационных осей.",
+      "summaryEn": "Lists datums, creates levels with optional floor plans (5mm duplicate tolerance), and generates explicit or spaced grid arrays.",
+      "actions": [
+        { "name": "list", "descRu": "Список всех уровней по отметке и осей с координатами.", "descEn": "Lists all levels sorted by elevation and grids with coordinates." },
+        { "name": "create_levels", "descRu": "Создание уровней и планов этажей (допуск 5 мм).", "descEn": "Creates levels and optional floor plans (5mm duplicate tolerance)." },
+        { "name": "create_grids", "descRu": "Создание осей явно или сеткой xSpacingsMm / ySpacingsMm.", "descEn": "Creates explicit grids or parametric xSpacingsMm / ySpacingsMm grid layouts." }
+      ],
+      "exampleJson": "{\n  \"assemblyPath\": \"DatumTools.dll\",\n  \"scriptArgs\": {\n    \"action\": \"create_grids\",\n    \"xSpacingsMm\": [6000, 6000, 6000],\n    \"ySpacingsMm\": [6000, 6000],\n    \"originX\": 0,\n    \"originY\": 0,\n    \"overhangMm\": 2000\n  }\n}"
+    },
+    {
+      "slug": "arch-model-tools",
+      "order": 2,
+      "dll": "ArchModelTools.dll",
+      "filterGroup": "modeling",
+      "categoryRu": "Моделирование",
+      "categoryEn": "Modeling",
+      "actionCount": 6,
+      "titleRu": "Стены, перекрытия, потолки, шахты и помещения",
+      "titleEn": "Walls, Floors, Ceilings, Shafts & Rooms",
+      "summaryRu": "Полный цикл архитектурного каркаса: список системных типов с толщиной, возведение стен, перекрытий с проёмами, потолков, шахт и расстановка помещений.",
+      "summaryEn": "Core architectural modeling: lists system family types with thickness, creates polyline walls, floors with openings, ceilings, shafts, and rooms.",
+      "actions": [
+        { "name": "list_types", "descRu": "Типоразмеры Walls, Floors, Ceilings, Roofs с толщиной (мм).", "descEn": "Lists Walls, Floors, Ceilings, and Roofs types with thickness (mm)." },
+        { "name": "create_walls", "descRu": "Создание стен по массиву сегментов или замкнутой polyline.", "descEn": "Creates walls from segments or a closed polyline perimeter." },
+        { "name": "create_floors", "descRu": "Создание перекрытий с внутренними контурами openings.", "descEn": "Creates floor slabs by boundary points or rectangle plus inner openings." },
+        { "name": "create_ceilings", "descRu": "Создание потолков по эскизу и высоте от уровня (offsetMm).", "descEn": "Creates ceilings by boundary sketch and height offset from level." },
+        { "name": "create_shaft_opening", "descRu": "Вертикальный проём шахты между baseLevel и topLevel.", "descEn": "Creates a vertical shaft opening spanning baseLevel to topLevel." },
+        { "name": "create_rooms", "descRu": "Размещение Room в замкнутых контурах с именем и номером.", "descEn": "Places rooms inside enclosed boundaries by (x, y), name, and number." }
+      ],
+      "exampleJson": "{\n  \"assemblyPath\": \"ArchModelTools.dll\",\n  \"scriptArgs\": {\n    \"action\": \"create_walls\",\n    \"polyline\": [[0,0],[12000,0],[12000,8000],[0,8000]],\n    \"closed\": true,\n    \"level\": \"Ground Floor\",\n    \"heightMm\": 3800,\n    \"wallType\": \"Generic - 200mm\"\n  }\n}"
+    },
+    {
+      "slug": "struct-model-tools",
+      "order": 3,
+      "dll": "StructModelTools.dll",
+      "filterGroup": "modeling",
+      "categoryRu": "Моделирование",
+      "categoryEn": "Modeling",
+      "actionCount": 3,
+      "titleRu": "Колонны и балки",
+      "titleEn": "Structural Columns & Beams",
+      "summaryRu": "Подбор типоразмеров конструктива, автоматическая расстановка колонн на всех пересечениях осей и построение балок.",
+      "summaryEn": "Lists structural column/framing types, places columns across grid intersections automatically, and builds beams.",
+      "actions": [
+        { "name": "list_types", "descRu": "Список загруженных типоразмеров колонн и балок.", "descEn": "Lists loaded structural/architectural column and framing types." },
+        { "name": "create_columns", "descRu": "Расстановка колонн явно или автоматически atGridIntersections.", "descEn": "Places columns explicitly or automatically at all grid intersections." },
+        { "name": "create_beams", "descRu": "Построение балок по начальной/конечной точке и zOffsetMm.", "descEn": "Creates beams by start/end coordinates on level with zOffsetMm." }
+      ],
+      "exampleJson": "{\n  \"assemblyPath\": \"StructModelTools.dll\",\n  \"scriptArgs\": {\n    \"action\": \"create_columns\",\n    \"atGridIntersections\": true,\n    \"baseLevel\": \"B1\",\n    \"topLevel\": \"Ground Floor\",\n    \"typeName\": \"300 x 300\"\n  }\n}"
+    },
+    {
+      "slug": "family-tools",
+      "order": 4,
+      "dll": "FamilyTools.dll",
+      "filterGroup": "families-views",
+      "categoryRu": "Семейства и Виды",
+      "categoryEn": "Families & Views",
+      "actionCount": 5,
+      "titleRu": "Поиск .rfa, загрузка и вставка семейств",
+      "titleEn": ".rfa Library Search, Load & Placement",
+      "summaryRu": "Поиск в локальных библиотеках (3 237 English / 29 Russian .rfa), тихая загрузка без окон Revit и пакетная вставка свободных и зависимых экземпляров.",
+      "summaryEn": "Searches disk libraries (3,237 English / 29 Russian .rfa), loads families without UI prompts, and batch-places unhosted/hosted instances.",
+      "actions": [
+        { "name": "scan_rfa_files", "descRu": "Поиск файлов .rfa на диске (English 3237 / Russian 29).", "descEn": "Scans disk folders for .rfa families (English 3237 / Russian 29)." },
+        { "name": "list_loaded", "descRu": "Список загруженных FamilySymbol с placementType.", "descEn": "Lists loaded FamilySymbols in the active model with placementType." },
+        { "name": "load_family", "descRu": "Тихая загрузка .rfa (IFamilyLoadOptions) и активация типов.", "descEn": "Silently loads a .rfa file via IFamilyLoadOptions and activates symbols." },
+        { "name": "place_unhosted", "descRu": "Вставка мебели, оборудования и сантехники с поворотом и параметрами.", "descEn": "Batch-places unhosted instances (furniture, fixtures) with rotation & params." },
+        { "name": "place_hosted", "descRu": "Вставка дверей, окон и розеток в hostId по доле t или координатам.", "descEn": "Batch-places hosted instances (doors, windows) on hostId by t (0..1) or XY." }
+      ],
+      "exampleJson": "{\n  \"assemblyPath\": \"FamilyTools.dll\",\n  \"scriptArgs\": {\n    \"action\": \"scan_rfa_files\",\n    \"folder\": \"C:\\\\ProgramData\\\\Autodesk\\\\RVT 2026\\\\Libraries\\\\English\",\n    \"query\": \"Door\",\n    \"limit\": 15\n  }\n}"
+    },
+    {
+      "slug": "element-ops-tools",
+      "order": 5,
+      "dll": "ElementOpsTools.dll",
+      "filterGroup": "audit-geometry",
+      "categoryRu": "Аудит и Геометрия",
+      "categoryEn": "Audit & Geometry",
+      "actionCount": 6,
+      "titleRu": "Трансформации, копирование, инспекция и удаление",
+      "titleEn": "Transformations, Level Copy, Inspect & Delete",
+      "summaryRu": "Детальная инспекция геометрии и 40 параметров, выделение в окне Revit, перемещение, поворот, тиражирование по этажам и безопасное удаление.",
+      "summaryEn": "Inspects geometry, bounding boxes, and up to 40 parameters, selects in UI, moves, rotates, copies across levels, and deletes elements.",
+      "actions": [
+        { "name": "inspect_elements", "descRu": "Геометрия location, bbox и до 40 параметров по ids или выделению.", "descEn": "Returns location, bounding box, and up to 40 parameters by IDs or selection." },
+        { "name": "select_in_ui", "descRu": "Программное выделение указанных ID в интерфейсе Revit.", "descEn": "Selects specified element IDs inside the Revit UI." },
+        { "name": "move", "descRu": "Сдвиг элементов на вектор (dxMm, dyMm, dzMm).", "descEn": "Translates elements by (dxMm, dyMm, dzMm)." },
+        { "name": "rotate", "descRu": "Поворот вокруг вертикальной оси (cxMm, cyMm) на angleDeg.", "descEn": "Rotates elements around axis (cxMm, cyMm) by angleDeg." },
+        { "name": "copy_to_levels", "descRu": "Копирование элементов с sourceLevel на targetLevels или все этажи выше.", "descEn": "Copies elements from sourceLevel to targetLevels or allLevelsAbove." },
+        { "name": "delete", "descRu": "Удаление указанных элементов по массиву ids в одной транзакции.", "descEn": "Deletes specified element IDs cleanly inside one transaction." }
+      ],
+      "exampleJson": "{\n  \"assemblyPath\": \"ElementOpsTools.dll\",\n  \"scriptArgs\": {\n    \"action\": \"inspect_elements\",\n    \"useSelection\": true\n  }\n}"
+    },
+    {
+      "slug": "view-tools",
+      "order": 6,
+      "dll": "ViewTools.dll",
+      "filterGroup": "families-views",
+      "categoryRu": "Семейства и Виды",
+      "categoryEn": "Families & Views",
+      "actionCount": 7,
+      "titleRu": "Виды, PNG-снимки, 3D-камера и референс-подложки",
+      "titleEn": "Views, PNG Export, 3D Camera & Reference Images",
+      "summaryRu": "Экспорт видов, настройка 3D-камер по пресетам, импорт чертежей-подложек, управление SectionBox и недеструктивный рендер 4 ракурсов.",
+      "summaryEn": "Exports views to PNG, sets preset 3D cameras, imports plan reference images, toggles selection SectionBox, and runs 4-angle Quad renders.",
+      "actions": [
+        { "name": "list_views", "descRu": "Список экспортируемых видов (ThreeD, FloorPlan, Elevation, Section).", "descEn": "Lists exportable views filtered by viewType." },
+        { "name": "export_view_png", "descRu": "Экспорт активного или заданного вида в PNG-файл.", "descEn": "Exports the active or named view to PNG for verification." },
+        { "name": "set_3d_camera", "descRu": "Ракурс камеры по пресету (iso_se, front и др.) или координатам.", "descEn": "Sets 3D camera using presets (iso_se, front, etc.) or eye/target coordinates." },
+        { "name": "import_reference_image", "descRu": "Импорт референс-плана как масштабированной подложки в 2D-вид.", "descEn": "Imports a scaled reference PNG/JPG overlay into a 2D view." },
+        { "name": "section_box_selection", "descRu": "Подрезка 3D-вида SectionBox по выделению с отступом paddingMm.", "descEn": "Crops 3D SectionBox around selection/elementIds with paddingMm." },
+        { "name": "reset_section_box", "descRu": "Сброс SectionBox (IsSectionBoxActive = false) и ZoomToFit.", "descEn": "Disables active SectionBox and optionally zooms to fit." },
+        { "name": "export_quad_png", "descRu": "Мультиракурсный рендер 4 PNG (iso_se, iso_nw, front, top) через RollBack.", "descEn": "Non-destructive 4-view PNG render (iso_se, iso_nw, front, top) via RollBack." }
+      ],
+      "exampleJson": "{\n  \"assemblyPath\": \"ViewTools.dll\",\n  \"scriptArgs\": {\n    \"action\": \"export_quad_png\",\n    \"pixelSize\": 1024\n  }\n}"
+    },
+    {
+      "slug": "louver-panel-tools",
+      "order": 7,
+      "dll": "LouverPanelTools.dll",
+      "filterGroup": "facades",
+      "categoryRu": "Фасады",
+      "categoryEn": "Facades",
+      "actionCount": 3,
+      "titleRu": "Решетчатые панели витражей (Lover Panel_Mech)",
+      "titleEn": "Slanted Curtain Louver Panels (Lover Panel_Mech)",
+      "summaryRu": "Автоматический поиск непрямоугольных угловых ячеек наклонных витражей, генерация подрезанных 3D-ламелей (шаг 125 мм DirectShape) и откат.",
+      "summaryEn": "Inspects non-rectangular corner panels on slanted curtain walls, generates mitered 125mm DirectShape louver blades, or reverts cleanly.",
+      "actions": [
+        { "name": "inspect", "descRu": "Поиск угловых непрямоугольных ячеек и сверка фазировки ламелей.", "descEn": "Detects non-rectangular panels and checks blade phasing against Lover Panel_Mech." },
+        { "name": "apply", "descRu": "Генерация DirectShape OST_CurtainWallPanels (шаг 125 мм) + замена ячейки на Пусто.", "descEn": "Generates trimmed 125mm DirectShape blades and swaps source panel to Empty." },
+        { "name": "revert", "descRu": "Удаление DirectShape-ламелей и восстановление исходных панелей.", "descEn": "Removes generated DirectShape blades and restores original panels." }
+      ],
+      "exampleJson": "{\n  \"assemblyPath\": \"LouverPanelTools.dll\",\n  \"scriptArgs\": {\n    \"action\": \"inspect\",\n    \"autoMechanicalRow\": true\n  }\n}"
+    },
+    {
+      "slug": "audit-tools",
+      "order": 8,
+      "dll": "AuditTools.dll",
+      "filterGroup": "audit-geometry",
+      "categoryRu": "Аудит и Геометрия",
+      "categoryEn": "Audit & Geometry",
+      "actionCount": 5,
+      "titleRu": "Аудит предупреждений, помещений и коллизий",
+      "titleEn": "Warnings, Rooms & 3D Clash Audit",
+      "summaryRu": "Кластеризация предупреждений Revit, выделение проблемных элементов, диагностика помещений и проверка пересечений геометрии между категориями.",
+      "summaryEn": "Clusters Revit warnings, selects offending elements, audits unplaced/redundant/duplicate rooms, and runs 3D category clash detection.",
+      "actions": [
+        { "name": "warnings_summary", "descRu": "Группировка предупреждений по частоте; >20 — полный JSON в файл.", "descEn": "Groups warnings by type; exports full JSON report if >20 items." },
+        { "name": "select_warning", "descRu": "Выделение элементов в Revit по groupIndex или строке query.", "descEn": "Selects and zooms to elements matching groupIndex or query substring." },
+        { "name": "check_rooms", "descRu": "Поиск unplaced, redundant, not_enclosed и дублей номеров помещений.", "descEn": "Detects unplaced, redundant, unenclosed, and duplicate-numbered rooms." },
+        { "name": "delete_unplaced_rooms", "descRu": "Удаление неразмещённых помещений (Location == null) в 1 клик.", "descEn": "Removes all unplaced rooms (Location == null) in a single transaction." },
+        { "name": "clash_check", "descRu": "3D-коллизии categoryA × categoryB (ElementIntersectsElementFilter).", "descEn": "Checks 3D intersections between categoryA and categoryB (unjoined pairs)." }
+      ],
+      "exampleJson": "{\n  \"assemblyPath\": \"AuditTools.dll\",\n  \"scriptArgs\": {\n    \"action\": \"warnings_summary\",\n    \"topN\": 20\n  }\n}"
+    },
+    {
+      "slug": "param-tools",
+      "order": 9,
+      "dll": "ParamTools.dll",
+      "filterGroup": "audit-geometry",
+      "categoryRu": "Аудит и Геометрия",
+      "categoryEn": "Audit & Geometry",
+      "actionCount": 4,
+      "titleRu": "Параметры, автонумерация и экспорт спецификаций",
+      "titleEn": "Parameter Audit, Auto-Renumber & CSV Schedules",
+      "summaryRu": "Контроль заполнения марок и огнестойкости, геометрическая нумерация по этажам/осям, синхронизация параметров и выгрузка таблиц в CSV.",
+      "summaryEn": "Audits parameter completeness & duplicates, spatially renumbers elements, syncs levels/rooms, and exports schedules to UTF-8 BOM CSV.",
+      "actions": [
+        { "name": "audit_params", "descRu": "Проверка пустых и дублей параметров (Mark, Fire Rating и др.).", "descEn": "Audits empty values and duplicates on instance/type parameters." },
+        { "name": "auto_renumber", "descRu": "Нумерация элементов с сортировкой Уровень → X (шаг 500 мм) → Y.", "descEn": "Renumbers selection or category sorted by Level → X (500mm) → Y → ID." },
+        { "name": "sync_params", "descRu": "Перенос level_to_comments, room_to_comments или copy_param.", "descEn": "Syncs level names, room names, or copies arbitrary parameter values." },
+        { "name": "export_schedules", "descRu": "Экспорт ViewSchedule в ;-CSV с UTF-8 BOM в папку schedules\\.", "descEn": "Exports ViewSchedules to semicolon-delimited UTF-8 BOM CSV files." }
+      ],
+      "exampleJson": "{\n  \"assemblyPath\": \"ParamTools.dll\",\n  \"scriptArgs\": {\n    \"action\": \"export_schedules\"\n  }\n}"
+    },
+    {
+      "slug": "join-tools",
+      "order": 10,
+      "dll": "JoinTools.dll",
+      "filterGroup": "audit-geometry",
+      "categoryRu": "Аудит и Геометрия",
+      "categoryEn": "Audit & Geometry",
+      "actionCount": 3,
+      "titleRu": "Соединение геометрии и приоритет резки",
+      "titleEn": "Geometry Joins & Architectural Cut Order",
+      "summaryRu": "Аудит неверного порядка резки, массовое соединение перекрытий, колонн, балок и стен по пресету arch_standard и безопасное разъединение.",
+      "summaryEn": "Inspects join status & cut priority, batch-joins elements with architectural cut precedence (arch_standard), or unjoins selections.",
+      "actions": [
+        { "name": "inspect_joins", "descRu": "Анализ стыков: корректные, неверный порядок резки, не соединены.", "descEn": "Analyzes category intersections: valid, reversed cut order, or unjoined." },
+        { "name": "auto_join", "descRu": "Пресет arch_standard (Перекрытия > Колонны > Балки > Стены).", "descEn": "Runs arch_standard join & cut order (Floors > Columns > Beams > Walls)." },
+        { "name": "unjoin_selection", "descRu": "Безопасное разъединение всех геометрий у выделенных элементов.", "descEn": "Cleanly unjoins all joined geometry on selected or given elementIds." }
+      ],
+      "exampleJson": "{\n  \"assemblyPath\": \"JoinTools.dll\",\n  \"scriptArgs\": {\n    \"action\": \"auto_join\",\n    \"preset\": \"arch_standard\",\n    \"limit\": 300\n  }\n}"
+    },
+    {
+      "slug": "cleanup-tools",
+      "order": 11,
+      "dll": "CleanupTools.dll",
+      "filterGroup": "audit-geometry",
+      "categoryRu": "Аудит и Геометрия",
+      "categoryEn": "Audit & Geometry",
+      "actionCount": 4,
+      "titleRu": "Здоровье модели, сброс графики и чистка видов",
+      "titleEn": "Model Health, View Overrides & Unused View Purge",
+      "summaryRu": "Комплексный чек-лист здоровья проекта (DWG/RVT-связи, In-Place, DirectShape, группы), сброс переопределений графики и безопасная чистка видов.",
+      "summaryEn": "Generates a full model health snapshot (CAD/RVT links, In-Place, DirectShape, groups), resets view overrides, and safely purges unused views.",
+      "actions": [
+        { "name": "model_health", "descRu": "Чек-лист здоровья модели + экспорт JSON в model_health.json.", "descEn": "Audits warnings, CAD/RVT links, In-Place, DirectShape, groups, views & filters." },
+        { "name": "reset_view_overrides", "descRu": "Сброс ручных переопределений графики элементов на виде.", "descEn": "Resets manual per-element graphics overrides on active or target view." },
+        { "name": "list_unused_views", "descRu": "Список видов, не вынесенных на листы (защищены {3D} и шаблоны).", "descEn": "Lists views not placed on sheets (protects {3D}, active view, templates)." },
+        { "name": "purge_unused_views", "descRu": "Безопасное удаление неиспользуемых видов (dryRun: true по умолчанию).", "descEn": "Safely deletes unplaced views (defaults to dryRun: true preview mode)." }
+      ],
+      "exampleJson": "{\n  \"assemblyPath\": \"CleanupTools.dll\",\n  \"scriptArgs\": {\n    \"action\": \"model_health\"\n  }\n}"
+    }
+  ],
+  "mcpTools": [
+    {
+      "name": "open_revit_inspector",
+      "mode": "MCP App UI",
+      "descRu": "Открывает интерактивную панель Timsco Connector (Timsco CAD Light Studio: метрики, таблица элементов, менеджер .rfa и кнопки запуска 0-токеновых скриптов).",
+      "descEn": "Opens the interactive Timsco Connector panel (Timsco CAD Light Studio: metrics, elements explorer, .rfa manager, and zero-token quick script triggers)."
+    },
+    {
+      "name": "revit_get_status",
+      "mode": "Diagnostic",
+      "descRu": "Возвращает имя открытого документа Revit, активный вид, количество элементов, предупреждений и статус канала Named Pipe.",
+      "descEn": "Returns active Revit document name, current view, element/warning counts, and Named Pipe connection status."
+    },
+    {
+      "name": "revit_query_elements",
+      "mode": "Query",
+      "descRu": "Выборка и фильтрация элементов модели по категории, уровню или поисковому запросу с возвратом ID и параметров.",
+      "descEn": "Queries and filters Revit model elements by category, level, or search term with IDs and key parameters."
+    },
+    {
+      "name": "revit_modify_parameter",
+      "mode": "Write (1 Tx)",
+      "descRu": "Пакетное изменение параметров экземпляров или типоразмеров в одной отменяемой транзакции Ctrl+Z.",
+      "descEn": "Batch-updates instance or type parameters across elements in a single Ctrl+Z undoable transaction."
+    },
+    {
+      "name": "revit_audit_warnings",
+      "mode": "Audit",
+      "descRu": "Чтение и группировка всех предупреждений открытого проекта Revit с ID затронутых элементов.",
+      "descEn": "Retrieves and groups active Revit model warnings along with their associated element IDs."
+    },
+    {
+      "name": "revit_list_types",
+      "mode": "Query",
+      "descRu": "Перечень загруженных в проект типоразмеров стен, перекрытий, потолков, кровель и семейств.",
+      "descEn": "Lists loaded wall, floor, ceiling, roof, and family types available in the active project."
+    },
+    {
+      "name": "revit_create_ceilings_from_floors",
+      "mode": "Modeling",
+      "descRu": "Автоматическая генерация потолков по замкнутым контурам существующих перекрытий.",
+      "descEn": "Automatically generates ceiling elements derived from existing floor slab boundaries."
+    },
+    {
+      "name": "revit_run_script",
+      "mode": "Hot-Load DLL",
+      "descRu": "Динамически выполняет C# 5.0 DLL в памяти Revit через AssemblyLoadContext (принимает короткое имя вроде AuditTools.dll и JSON scriptArgs).",
+      "descEn": "Dynamically runs compiled C# 5.0 DLLs inside Revit via AssemblyLoadContext (accepts bare names like AuditTools.dll + JSON scriptArgs)."
+    }
+  ],
+  "faq": [
+    {
+      "qRu": "Почему Windows SmartScreen показывает предупреждение при запуске .exe?",
+      "qEn": "Why does Windows SmartScreen show a warning on the .exe installer?",
+      "aRu": "Сборка v1.1.0 распространяется напрямую от Timsco Partners LLC без платной коммерческой подписи EV Code Signing. Вы всегда можете сверить SHA-256 файла на этой странице (d70f9807...0be53a47) или распаковать содержимое без запуска установщика командой `/extract C:\\Temp\\TimscoPayload` для проверки.",
+      "aEn": "The v1.1.0 binary is distributed directly without a paid EV Code Signing certificate. Verify the file SHA-256 on this page (d70f9807...0be53a47) or inspect all contents safely prior to running via `/extract C:\\Temp\\TimscoPayload`."
+    },
+    {
+      "qRu": "Нужно ли перезапускать Revit 2026 после обновления C#-скриптов или вызова DLL?",
+      "qEn": "Do I need to restart Revit 2026 when running or updating C# DLL scripts?",
+      "aRu": "Нет. Надстройка RevitMcpAddin загружает скомпилированные DLL через выгружаемый `AssemblyLoadContext` на лету. Перезапуск Revit требуется только один раз после первичной установки или обновления самой надстройки через EXE.",
+      "aEn": "No. RevitMcpAddin loads compiled C# DLLs into memory via a collectible `AssemblyLoadContext`. Restarting Revit 2026 is only required once after installing or updating the add-in itself."
+    },
+    {
+      "qRu": "Почему запуск скриптов из библиотеки DLL называется 0-токеновым?",
+      "qEn": "How does the 0-token DLL execution save AI quota?",
+      "aRu": "Сложная логика Revit API (поиск коллизий, автонумерация, стыки геометрии, расчёт ламелей витража) уже скомпилирована в C# DLL. Из панели `open_revit_inspector` они вызываются напрямую без участия языковой модели (0 токенов), а для AI-сценариев модели отправляют только компактный JSON параметров.",
+      "aEn": "Complex Revit API logic (clash checks, auto-renumbering, join precedence, louver geometry) is pre-compiled in C# DLLs. Triggers inside the `open_revit_inspector` UI execute directly with 0 LLM tokens, and AI workflows send tiny JSON arguments rather than generating raw Revit scripts."
+    },
+    {
+      "qRu": "Где сохраняются крупные JSON-отчёты и спецификации CSV?",
+      "qEn": "Where are large JSON audits, CSV schedules, and PNG renders saved?",
+      "aRu": "По умолчанию все файлы пишутся в `%LOCALAPPDATA%\\TimscoConnector\\out\\` (а спецификации — в подпапку `schedules\\`). Папку можно переопределить системной переменной окружения `TIMSCO_OUT_DIR`.",
+      "aEn": "By default all outputs are saved under `%LOCALAPPDATA%\\TimscoConnector\\out\\` (and schedules under `schedules\\`). Override anytime with the `TIMSCO_OUT_DIR` environment variable."
+    },
+    {
+      "qRu": "Работает ли интеграция с русскоязычной и англоязычной библиотеками семейств .rfa?",
+      "qEn": "Does FamilyTools work with both Russian and English Revit .rfa libraries?",
+      "aRu": "Да. По умолчанию `scan_rfa_files` ищет в `C:\\ProgramData\\Autodesk\\RVT 2026\\Libraries\\Russian` (29 семейств), а полная библиотека из 3 237 семейств доступна передачей параметра `folder` на `Libraries\\English`. Загрузка происходит тихо через `IFamilyLoadOptions`.",
+      "aEn": "Yes. By default `scan_rfa_files` scans `Libraries\\Russian` (29 families), while the complete 3,237-family library is queried by setting `folder` to `C:\\ProgramData\\Autodesk\\RVT 2026\\Libraries\\English`. Loading suppresses modal prompts via `IFamilyLoadOptions`."
+    },
+    {
+      "qRu": "Отправляет ли Timsco Connector BIM-модель или геометрию во внешнее облако?",
+      "qEn": "Does Timsco Connector upload our Revit BIM model to an external cloud?",
+      "aRu": "Обмен между RevitMcpAddin и RevitMcpServer работает строго локально на вашем ПК через Windows Named Pipe. Тяжёлые массивы элементов (>50 записей) остаются в локальных JSON-файлах в `%LOCALAPPDATA%\\TimscoConnector\\out\\` и не передаются в ИИ без вашего явного запроса.",
+      "aEn": "Communication between RevitMcpAddin and RevitMcpServer runs strictly locally over a Windows Named Pipe. Large element dumps (>50 records) stay on local disk inside `%LOCALAPPDATA%\\TimscoConnector\\out\\` unless you explicitly attach them."
+    }
+  ],
+  "company": {
+    "brandName": "Timsco Architects",
+    "legalNameRu": "ОсОО «Тимско Партнерс»",
+    "legalNameEn": "Timsco Partners LLC",
+    "addressRu": "г. Бишкек, ул. Шопокова, 121/1, офис 511",
+    "addressEn": "121/1 Shopokova St., Office 511, Bishkek, Kyrgyzstan",
+    "website": "https://www.timscoarchitects.kg",
+    "email": "sales@timscoarchitects.kg",
+    "phone": "+996 777 406 405",
+    "whatsappUrl": "https://wa.me/996777406405",
+    "instagramUrl": "https://www.instagram.com/timsco.partners/",
+    "linkedinUrl": "https://www.linkedin.com/company/timsco-architects/",
+    "youtubeUrl": "https://www.youtube.com/@timsco.architects",
+    "behanceUrl": "https://www.behance.net/timscoarchitects",
+    "twogisUrl": "https://go.2gis.com/bXCNv",
+    "copyrightRu": "Проектная студия Timsco Architects · © 2026 ОсОО «Тимско Партнерс» · г. Бишкек, ул. Шопокова, 121/1, офис 511 · Все права защищены.",
+    "copyrightEn": "Timsco Architects Design Studio · © 2026 Timsco Partners LLC · 121/1 Shopokova St., Office 511, Bishkek, Kyrgyzstan · All rights reserved."
+  }
+}
